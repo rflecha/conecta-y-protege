@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+---
+
+<BaseLayout title="Guías" description="Guías prácticas para ayudar a las familias a proteger a sus hijos en el mundo digital.">
+  <section class="container page-head">
+    <div class="eyebrow">Guías prácticas</div>
+    <h1>Entender primero. Configurar después.</h1>
+    <p class="lead">Explicaciones claras, pruebas reales y configuraciones que puedes adaptar en casa sin necesidad de ser especialista.</p>
+  </section>
+
+  <section class="container section">
+    <div class="article-list">
+      {posts.map((post) => (
+        <a class="article-card" href={`/guias/${post.id}/`}>
+          <div class="article-meta">
+            {post.data.category}<br />
+            {post.data.readingTime ?? ''}
+          </div>
+          <div>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+          </div>
+          <div class="article-arrow">Leer →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
