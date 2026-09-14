@@ -1,20 +1,86 @@
 ---
-const title = 'Conecta y Protege';
-const description = 'Ayudando a nuestros hijos a crecer seguros en el mundo digital.';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .slice(0, 3);
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <p>Web en construcción.</p>
-    </main>
-  </body>
-</html>
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Seguridad digital para familias</div>
+        <h1>Conectarles al mundo sin dejarles solos.</h1>
+        <p class="lead">Guías prácticas para entender qué hacen realmente nuestros hijos con la tecnología, reducir riesgos y acompañarlos mientras ganan autonomía digital.</p>
+        <div class="actions">
+          <a class="button primary" href="/guias">Ver las guías</a>
+          <a class="button secondary" href="/sobre-el-proyecto">Conocer el proyecto</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <strong>Una idea sencilla</strong>
+        <p>Un control parental no es una aplicación. Es un conjunto de capas: dispositivo, usuario, aplicaciones, navegador, DNS, red doméstica y, sobre todo, acompañamiento familiar.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">Cómo trabajamos</div>
+        <h2>Menos promesas. Más pruebas.</h2>
+        <p>No basta con activar una opción y confiar. Queremos entender qué protege cada herramienta, qué deja fuera y cómo comprobarlo en condiciones reales.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-number">1</div>
+          <h3>Entender el riesgo</h3>
+          <p>Explicamos por dónde puede entrar un problema y por qué algunos controles fallan.</p>
+        </div>
+        <div class="card">
+          <div class="card-number">2</div>
+          <h3>Configurar por capas</h3>
+          <p>Combinamos medidas sencillas para que el fallo de una no deje todo abierto.</p>
+        </div>
+        <div class="card">
+          <div class="card-number">3</div>
+          <h3>Comprobar que funciona</h3>
+          <p>Probamos las restricciones como lo haría un menor curioso, documentando también los fallos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-intro">
+      <div class="eyebrow">Últimas guías</div>
+      <h2>Empezamos por el control parental de verdad</h2>
+      <p>La primera serie documenta cómo construir un entorno doméstico más seguro sin depender de una única aplicación.</p>
+    </div>
+
+    <div class="article-list">
+      {posts.map((post) => (
+        <a class="article-card" href={`/guias/${post.id}/`}>
+          <div class="article-meta">{post.data.category}<br />{post.data.readingTime ?? ''}</div>
+          <div>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+          </div>
+          <div class="article-arrow">Leer →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">La filosofía</div>
+        <h2>Proteger no es vigilarlo todo.</h2>
+        <p>La tecnología forma parte de su mundo. El objetivo es reducir riesgos mientras aprenden a usarla con criterio, confianza y una autonomía cada vez mayor.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
