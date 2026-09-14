@@ -3,84 +3,115 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
-  .slice(0, 3);
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+
+const featured = posts[0];
 ---
 
 <BaseLayout>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Seguridad digital para familias</div>
-        <h1>Conectarles al mundo sin dejarles solos.</h1>
-        <p class="lead">Guías prácticas para entender qué hacen realmente nuestros hijos con la tecnología, reducir riesgos y acompañarlos mientras ganan autonomía digital.</p>
+  <section class="hero hero-home">
+    <div class="container hero-split">
+      <div class="hero-copy">
+        <div class="eyebrow">Guías prácticas para familias digitales</div>
+        <h1>Tecnología que les acerca al mundo.<br />Información que les mantiene <span>seguros.</span></h1>
+        <p class="lead">Conecta y Protege es una guía práctica y cercana para madres, padres y educadores que quieren aprovechar lo mejor de la tecnología y reducir sus riesgos en la vida de sus hijos e hijas.</p>
         <div class="actions">
-          <a class="button primary" href="/guias">Ver las guías</a>
-          <a class="button secondary" href="/sobre-el-proyecto">Conocer el proyecto</a>
+          <a class="button primary" href="/guias">Ver guías →</a>
+          <a class="button secondary" href="/sobre-el-proyecto">Sobre el proyecto</a>
         </div>
       </div>
-      <aside class="hero-card">
-        <strong>Una idea sencilla</strong>
-        <p>Un control parental no es una aplicación. Es un conjunto de capas: dispositivo, usuario, aplicaciones, navegador, DNS, red doméstica y, sobre todo, acompañamiento familiar.</p>
-      </aside>
-    </div>
-  </section>
 
-  <section class="section alt">
-    <div class="container">
-      <div class="section-intro">
-        <div class="eyebrow">Cómo trabajamos</div>
-        <h2>Menos promesas. Más pruebas.</h2>
-        <p>No basta con activar una opción y confiar. Queremos entender qué protege cada herramienta, qué deja fuera y cómo comprobarlo en condiciones reales.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-number">1</div>
-          <h3>Entender el riesgo</h3>
-          <p>Explicamos por dónde puede entrar un problema y por qué algunos controles fallan.</p>
-        </div>
-        <div class="card">
-          <div class="card-number">2</div>
-          <h3>Configurar por capas</h3>
-          <p>Combinamos medidas sencillas para que el fallo de una no deje todo abierto.</p>
-        </div>
-        <div class="card">
-          <div class="card-number">3</div>
-          <h3>Comprobar que funciona</h3>
-          <p>Probamos las restricciones como lo haría un menor curioso, documentando también los fallos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container section">
-    <div class="section-intro">
-      <div class="eyebrow">Últimas guías</div>
-      <h2>Empezamos por el control parental de verdad</h2>
-      <p>La primera serie documenta cómo construir un entorno doméstico más seguro sin depender de una única aplicación.</p>
-    </div>
-
-    <div class="article-list">
-      {posts.map((post) => (
-        <a class="article-card" href={`/guias/${post.id}/`}>
-          <div class="article-meta">{post.data.category}<br />{post.data.readingTime ?? ''}</div>
-          <div>
-            <h3>{post.data.title}</h3>
-            <p>{post.data.description}</p>
+      <div class="hero-visual" aria-label="Familia usando tecnología de forma acompañada">
+        <div class="hero-visual-glow"></div>
+        <div class="family-card">
+          <div class="family-icon" aria-hidden="true">
+            <span class="head head-a"></span>
+            <span class="head head-b"></span>
+            <span class="head head-c"></span>
+            <span class="body body-a"></span>
+            <span class="body body-b"></span>
+            <span class="body body-c"></span>
           </div>
-          <div class="article-arrow">Leer →</div>
-        </a>
-      ))}
+          <p>Un mundo digital<br /><strong>con más oportunidades</strong></p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section alt">
+  <section class="principles-strip" id="recursos">
+    <div class="container principles-grid">
+      <article class="principle">
+        <div class="principle-icon">▤</div>
+        <div><h3>Guías paso a paso</h3><p>Explicaciones claras y sin tecnicismos, con capturas y ejemplos.</p></div>
+      </article>
+      <article class="principle">
+        <div class="principle-icon">◈</div>
+        <div><h3>Basado en evidencias</h3><p>Recomendaciones prácticas apoyadas en buenas prácticas y fuentes fiables.</p></div>
+      </article>
+      <article class="principle">
+        <div class="principle-icon">●</div>
+        <div><h3>Enfocado en la vida real</h3><p>Soluciones pensadas para problemas cotidianos de las familias.</p></div>
+      </article>
+      <article class="principle">
+        <div class="principle-icon">♥</div>
+        <div><h3>Una mirada positiva</h3><p>Menos miedo, más herramientas para un uso equilibrado.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section featured-guides">
     <div class="container">
-      <div class="section-intro">
-        <div class="eyebrow">La filosofía</div>
-        <h2>Proteger no es vigilarlo todo.</h2>
-        <p>La tecnología forma parte de su mundo. El objetivo es reducir riesgos mientras aprenden a usarla con criterio, confianza y una autonomía cada vez mayor.</p>
+      <div class="section-heading-row">
+        <div>
+          <div class="eyebrow">Guías destacadas</div>
+          <h2>Empieza por aquí</h2>
+          <p>Recursos prácticos para los retos más comunes.</p>
+        </div>
+        <a class="text-link" href="/guias">Ver todas las guías →</a>
       </div>
+
+      <div class="guide-grid">
+        {featured && (
+          <a class="guide-card" href={`/guias/${featured.id}/`}>
+            <div class="guide-icon blue">▰</div>
+            <h3>{featured.data.title}</h3>
+            <p>{featured.data.description}</p>
+            <div class="guide-meta"><span>Nivel: Fácil</span><span>{featured.data.readingTime ?? '10 min'}</span></div>
+          </a>
+        )}
+
+        <article class="guide-card muted-card">
+          <div class="guide-icon green">▯</div>
+          <h3>Primer móvil: decisiones clave</h3>
+          <p>Qué valorar antes de dar el primer smartphone y cómo prepararlo.</p>
+          <div class="guide-meta"><span>Próximamente</span><span>15 min</span></div>
+        </article>
+
+        <article class="guide-card muted-card">
+          <div class="guide-icon purple">✦</div>
+          <h3>Videojuegos en familia</h3>
+          <p>Cómo elegir, configurar y acompañar los videojuegos de forma segura.</p>
+          <div class="guide-meta"><span>Próximamente</span><span>25 min</span></div>
+        </article>
+
+        <article class="guide-card muted-card">
+          <div class="guide-icon amber">●●</div>
+          <h3>Redes sociales: guía para padres</h3>
+          <p>Qué conviene saber, qué puedes hacer y cómo acompañarles.</p>
+          <div class="guide-meta"><span>Próximamente</span><span>20 min</span></div>
+        </article>
+      </div>
+
+      <div class="subscribe-band" id="suscribete">
+        <div class="subscribe-icon">✉</div>
+        <div>
+          <h3>Recibe nuevas guías en tu correo</h3>
+          <p>Sin spam. Solo contenido útil para familias.</p>
+        </div>
+        <a class="button primary" href="mailto:hola@conectayprotege.com?subject=Quiero%20suscribirme%20a%20Conecta%20y%20Protege">Suscribirme</a>
+      </div>
+
+      <p class="closing-note">Pequeños pasos.<br /><strong>Grandes diferencias.</strong></p>
     </div>
   </section>
 </BaseLayout>
