@@ -3,7 +3,7 @@ title: "Por qué empecé a intentar hacer Internet más seguro para mi hijo"
 description: "Cómo una preocupación como padre terminó convirtiéndose en un proyecto para entender los riesgos de Internet y comprobar hasta dónde funcionan realmente los controles parentales."
 published: 2026-09-15
 category: "Control parental"
-readingTime: "8 min"
+readingTime: "7 min"
 draft: false
 ---
 
@@ -57,109 +57,55 @@ No todos los riesgos son iguales ni pueden solucionarse de la misma manera.
 
 Y, sobre todo, **ninguna aplicación de control parental puede solucionarlos todos**.
 
-## En lugar de confiar en los controles, decidimos probarlos
+## Empecé a poner algunas barreras
 
 Así que empecé a configurar algunas protecciones en casa.
 
-Pero decidí hacer algo diferente.
+No buscaba controlar absolutamente todo lo que hacía mi hijo ni convertir Internet en un espacio cerrado. Quería poner límites razonables y reducir la posibilidad de que llegara fácilmente a determinados contenidos o servicios que no consideraba adecuados para su edad.
 
-No quería instalar un control parental, ver que aparecía un bonito mensaje diciendo que una página estaba bloqueada y dar el problema por solucionado.
+Al principio, como probablemente hacemos muchos padres, comprobaba que las restricciones estuvieran activadas y que aquello que había decidido limitar realmente estuviera bloqueado.
 
-Quería comprobar si realmente funcionaba.
+Y en muchas situaciones funcionaba perfectamente.
 
-Y para algunas de esas pruebas conté con el mejor ayudante posible: **mi propio hijo**.
+Pero con el uso cotidiano empecé a observar algo que no había tenido suficientemente en cuenta: **había más formas de llegar a Internet de las que yo había previsto**.
 
-La dinámica era bastante sencilla.
+A veces era una aplicación, otras una función de un dispositivo o simplemente un camino diferente al que yo había probado al configurar las restricciones.
 
-Yo configuraba una protección y después intentábamos saltárnosla.
+No hacía falta hacer nada especialmente sofisticado. Muchas veces era simplemente cuestión de explorar y utilizar la tecnología de una forma distinta a como lo hacemos los adultos.
 
-Probábamos una página que no debía poder abrirse.
+Y aquello cambió mi manera de afrontar el problema.
 
-Bloqueada.
+## Cuando descubrí que los controles también tienen límites
 
-Probábamos otra.
+En lugar de limitarme a corregir cada problema según aparecía, empecé a intentar entender por qué se producía.
 
-También bloqueada.
+Si una protección funcionaba de una manera pero podía evitarse de otra, buscaba la forma de reducir también esa posibilidad.
 
-Cambiábamos alguna cosa y volvíamos a probar.
+Después observaba cómo funcionaba con el uso normal.
 
-Para él aquello tenía bastante de juego:
+Poco a poco dejé de buscar **“el mejor control parental”**.
 
-> **“A ver si consigo entrar.”**
+Empecé a pensar que quizá era más eficaz combinar distintas medidas sencillas y, sobre todo, reducir el número de lugares desde los que había que controlar el acceso.
 
-Y para mí se convirtió en una manera estupenda de comprobar hasta qué punto funcionaban realmente las protecciones que estaba poniendo.
-
-Además, había algo que me gustaba especialmente de hacerlo juntos: **él entendía que existían esas protecciones y por qué las estaba poniendo**.
-
-No se trataba de espiarle a escondidas.
-
-Se trataba de intentar construir entre los dos un entorno más seguro.
-
-## Hasta que encontró una forma de saltárselo
-
-Durante un tiempo parecía que todo funcionaba bastante bien.
-
-Las páginas que habíamos decidido restringir no se abrían y las protecciones hacían lo que se suponía que tenían que hacer.
-
-Hasta que un día mi hijo instaló en Chrome una herramienta que permitía navegar a través de una VPN.
-
-No hace falta saber qué es una VPN para entender lo que ocurrió.
-
-Básicamente, encontró **otro camino para llegar a Internet**.
-
-Probamos de nuevo una de las páginas que estaba bloqueada.
-
-Y se abrió.
-
-Así de fácil.
-
-Tengo que reconocer que me sorprendió.
-
-Había dedicado tiempo a configurar las restricciones, había comprobado que funcionaban y, de repente, una pequeña herramienta instalada en el navegador conseguía evitar buena parte de ellas.
-
-Pero precisamente ahí empezó la parte más interesante del proyecto.
-
-## Cada vez que encontraba un agujero, intentábamos cerrarlo
-
-En lugar de verlo como un fracaso, lo convertimos en otra prueba.
-
-**Vale, has conseguido saltártelo. ¿Por qué?**
-
-Intentaba entender qué había ocurrido y buscaba una forma de evitarlo.
-
-Después volvíamos a probar.
-
-A veces funcionaba.
-
-Otras veces encontrábamos otra manera de evitar la protección.
-
-Y vuelta a empezar.
-
-Poco a poco fui cambiando mi manera de afrontar el problema.
-
-Ya no buscaba **“el mejor control parental”**.
-
-Intentaba combinar distintas medidas sencillas para que, si una fallaba, hubiera otra que siguiera ayudando a protegerle.
-
-Exactamente la misma idea que había utilizado durante años profesionalmente, pero trasladada a una casa.
+Exactamente la misma idea que había utilizado durante años profesionalmente, pero trasladada a una casa y simplificada para que fuera manejable.
 
 ## Y descubrí algo todavía más importante
 
-Después de muchas pruebas también llegué a una conclusión que puede parecer contradictoria viniendo de alguien que trabaja en tecnología:
+Con el tiempo también llegué a una conclusión que puede parecer contradictoria viniendo de alguien que trabaja en tecnología:
 
 **la tecnología no puede solucionar por sí sola este problema.**
 
-Podemos bloquear páginas.
+Podemos bloquear determinados contenidos.
 
 Podemos establecer horarios.
 
-Podemos impedir la instalación de determinadas aplicaciones.
+Podemos limitar aplicaciones o funciones.
 
-Podemos dificultar que se salten algunas restricciones.
+Podemos reducir muchas posibilidades de acceso.
 
 Todo eso ayuda.
 
-Pero siempre aparecerá algo nuevo. Y según nuestros hijos vayan creciendo, también tendrán más conocimientos, más autonomía y más capacidad para encontrar alternativas.
+Pero nuestros hijos crecen, aprenden y utilizan la tecnología de maneras que nosotros no siempre habíamos previsto.
 
 Por eso no quiero que Conecta y Protege sea una página sobre cómo **vigilar a nuestros hijos**.
 
@@ -175,17 +121,17 @@ Y quiero hacerlo de una manera muy concreta.
 
 No voy a partir de la idea de que existe una solución perfecta, porque después de probar muchas cosas **sé que no existe**.
 
-Voy a contar lo que nosotros hemos probado.
+Voy a contar lo que nosotros hemos ido encontrando en casa.
 
-Qué problema queríamos solucionar.
+Qué problema quería solucionar.
 
-Qué hicimos.
+Qué hice.
 
 Qué funcionó.
 
-Qué consiguió saltarse mi hijo.
+Qué limitaciones fui descubriendo.
 
-Y qué tuvimos que cambiar después.
+Y qué tuve que cambiar después.
 
 Cuando sea necesario configurar algo, intentaré explicarlo paso a paso y sin asumir que quien está leyendo sabe de informática.
 
@@ -197,4 +143,8 @@ Y mantener siempre presente algo que para mí se ha convertido en el principio f
 
 > **Los controles no eliminan el riesgo. Nos ayudan a reducirlo.**
 
-En el siguiente artículo contaré cómo montamos nuestras primeras protecciones, qué conseguimos bloquear y cómo empezamos a descubrir que **poner una barrera no significa necesariamente que nuestros hijos no puedan encontrar otra puerta**.
+En los siguientes artículos iré contando esos descubrimientos uno a uno: los diferentes dispositivos de casa, los controles que parecían funcionar hasta que aparecía otra forma de acceder, las restricciones que fui incorporando y también las que no dieron el resultado que esperaba.
+
+Porque una de las primeras cosas que aprendí fue muy sencilla:
+
+> **Antes de añadir más controles, quizá conviene reducir el número de puertas que tenemos que controlar.**
