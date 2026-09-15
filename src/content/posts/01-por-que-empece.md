@@ -1,116 +1,200 @@
 ---
-title: "Control parental de verdad (1): por qué empecé a investigar"
-description: "Cómo pasé de buscar una aplicación de control parental a pensar la seguridad digital familiar como un sistema de capas."
-published: 2026-09-14
+title: "Por qué empecé a intentar hacer Internet más seguro para mi hijo"
+description: "Cómo una preocupación como padre terminó convirtiéndose en un proyecto para entender los riesgos de Internet y comprobar hasta dónde funcionan realmente los controles parentales."
+published: 2026-09-15
 category: "Control parental"
-readingTime: "7 min"
+readingTime: "8 min"
 draft: false
 ---
 
-Durante bastante tiempo pensé que controlar el acceso de un niño a Internet era relativamente sencillo.
+Internet forma parte de la vida de nuestros hijos.
 
-Configuras el control parental del móvil o del ordenador, limitas el tiempo de pantalla, bloqueas algunas aplicaciones y listo.
+Podemos retrasar el momento en que tengan su primer móvil, limitar el tiempo que pasan delante de una pantalla o decidir qué aplicaciones pueden utilizar. Pero llega un momento en el que tienen acceso a Internet, ya sea desde un ordenador, una tablet, el móvil, la televisión o incluso una consola.
 
-Hasta que empiezas a mirar un poco más de cerca.
+Y ahí empiezan las dudas.
 
-Soy padre de un niño de 10 años y, como les ocurre a muchas familias, en casa hemos tenido que enfrentarnos a algo que probablemente nuestros padres nunca tuvieron que gestionar: **dar acceso a la tecnología a un niño sin darle, al mismo tiempo, acceso a todo Internet**.
+¿Qué pueden encontrarse? ¿Cómo podemos evitar que accedan a determinados contenidos? ¿Con quién pueden hablar? ¿Podemos controlar el tiempo que pasan conectados? ¿Son realmente eficaces los controles parentales?
 
-Y resulta bastante más complicado de lo que parece.
+Yo también me hice todas esas preguntas.
 
-## Cuando empiezas a descubrir las puertas
+Y así empezó este proyecto.
 
-Un niño no necesita abrir Chrome y escribir una dirección para acceder a Internet.
+## Cuando tu trabajo se cruza con lo que ocurre en casa
 
-Puede llegar a contenidos desde un videojuego. Desde YouTube. Desde una televisión. Desde un enlace. Desde una aplicación aparentemente inofensiva. Desde el navegador integrado de algún servicio. O utilizando herramientas que permiten esquivar algunos de los filtros que hemos configurado.
+Llevo más de veinte años trabajando en tecnología y durante parte de mi trayectoria profesional una de mis responsabilidades ha sido la ciberseguridad de una compañía.
 
-Y ahí fue cuando empecé a hacerme una pregunta:
+Cuando empecé a preocuparme más seriamente por la seguridad de mi hijo en Internet, inevitablemente terminé relacionando las dos cosas.
 
-> **¿Cómo puedo saber qué puede hacer realmente mi hijo cuando está delante de un dispositivo?**
+En una empresa dedicamos mucho esfuerzo a proteger la información y los sistemas. Y hay una idea que tenemos bastante asumida:
 
-No lo que creo que puede hacer.
+**ninguna medida de seguridad es perfecta.**
 
-No lo que dice la aplicación de control parental que puede hacer.
+No confiamos toda la seguridad a una única herramienta. Ponemos diferentes barreras porque sabemos que alguna puede fallar.
 
-Lo que **realmente puede hacer**.
+Y un día me pregunté:
 
-## Empecé a probarlo como si fuera él
+> **¿Por qué no aplicar esa misma idea en casa, pero de una forma sencilla?**
 
-Por mi formación tecnológica, mi primera reacción fue empezar a investigar.
+No pretendía convertir mi casa en una empresa ni llenar los ordenadores de complicadas herramientas de seguridad.
 
-Creé cuentas infantiles. Configuré controles parentales. Bloqueé aplicaciones. Probé filtros DNS. Revisé el router. Configuré usuarios de Windows sin permisos de administrador. Empecé a bloquear VPN y otras formas de evitar los filtros.
+Simplemente quería comprobar si podía crear un entorno en el que mi hijo pudiera utilizar Internet reduciendo algunos de los riesgos que más me preocupaban.
 
-Pero lo más interesante fue intentar saltarme mis propias restricciones.
+## Porque el problema no es solamente lo que buscan
 
-Porque cada vez que cerraba una puerta aparecía otra.
+Creo que este fue uno de mis primeros cambios de perspectiva.
 
-Y entonces entendí algo importante:
+Cuando hablamos de proteger a nuestros hijos en Internet es fácil pensar únicamente en evitar que busquen determinadas cosas.
 
-> **El control parental no es una aplicación. Es un sistema de capas.**
+Pero no siempre son ellos quienes las buscan.
 
-Una herramienta puede controlar el tiempo de pantalla, pero no necesariamente todo el tráfico de Internet.
+Pueden llegar a contenidos inadecuados desde un vídeo, un anuncio, un enlace dentro de un juego o una búsqueda aparentemente inocente.
 
-Un filtro DNS puede bloquear muchas páginas, pero tiene sus limitaciones.
+También pueden contactar con desconocidos o ser contactados por ellos.
 
-El router puede aplicar restricciones a los dispositivos, pero tampoco sabe siempre qué ocurre dentro de una aplicación.
+Y existen otros riesgos menos evidentes: pasar demasiadas horas conectados, utilizar dispositivos hasta muy tarde, encontrarse con contenidos relacionados con conductas alimentarias poco saludables, violencia, pornografía o espacios diseñados para mantener su atención durante el mayor tiempo posible.
 
-Y un perfil infantil puede funcionar perfectamente en un dispositivo y ser prácticamente inútil en otro.
+No todos los riesgos son iguales ni pueden solucionarse de la misma manera.
 
-Por eso confiar toda la protección en una sola herramienta genera una falsa sensación de seguridad.
+Y, sobre todo, **ninguna aplicación de control parental puede solucionarlos todos**.
 
-## El modelo que estoy construyendo
+## En lugar de confiar en los controles, decidimos probarlos
 
-Mi objetivo empezó a cambiar.
+Así que empecé a configurar algunas protecciones en casa.
 
-Ya no buscaba “el mejor control parental”.
+Pero decidí hacer algo diferente.
 
-Quería construir algo parecido a lo que en ciberseguridad llamamos **defensa en profundidad**: si una protección falla, existe otra detrás.
+No quería instalar un control parental, ver que aparecía un bonito mensaje diciendo que una página estaba bloqueada y dar el problema por solucionado.
 
-En casa, eso significa combinar distintas capas:
+Quería comprobar si realmente funcionaba.
 
-**Niño → dispositivo → usuario → aplicaciones → navegador → DNS → red doméstica → supervisión familiar.**
+Y para algunas de esas pruebas conté con el mejor ayudante posible: **mi propio hijo**.
 
-Ninguna de ellas es perfecta.
+La dinámica era bastante sencilla.
 
-Pero juntas pueden hacer que acceder accidentalmente —o deliberadamente— a determinados contenidos sea mucho más difícil.
+Yo configuraba una protección y después intentábamos saltárnosla.
 
-Y hay otra capa todavía más importante que todas las anteriores:
+Probábamos una página que no debía poder abrirse.
 
-**la educación y la confianza.**
+Bloqueada.
 
-Porque ningún firewall puede sustituir una conversación.
+Probábamos otra.
 
-El objetivo no debería ser vigilar cada movimiento de nuestros hijos, sino crear un entorno suficientemente seguro mientras aprenden poco a poco a desenvolverse solos en Internet.
+También bloqueada.
 
-## ¿Por qué voy a contar todo esto?
+Cambiábamos alguna cosa y volvíamos a probar.
 
-Durante esta investigación me he encontrado con mucha información fragmentada.
+Para él aquello tenía bastante de juego:
 
-Un tutorial explica cómo configurar una herramienta concreta.
+> **“A ver si consigo entrar.”**
 
-Otro cómo bloquear páginas.
+Y para mí se convirtió en una manera estupenda de comprobar hasta qué punto funcionaban realmente las protecciones que estaba poniendo.
 
-Otro cómo configurar un router.
+Además, había algo que me gustaba especialmente de hacerlo juntos: **él entendía que existían esas protecciones y por qué las estaba poniendo**.
 
-Otro cómo limitar YouTube.
+No se trataba de espiarle a escondidas.
 
-Pero pocas veces he encontrado una explicación completa de **cómo encajan todas esas piezas en una casa real**.
+Se trataba de intentar construir entre los dos un entorno más seguro.
 
-Por eso he decidido documentar lo que estoy aprendiendo.
+## Hasta que encontró una forma de saltárselo
 
-No como experto en educación infantil ni como una receta infalible.
+Durante un tiempo parecía que todo funcionaba bastante bien.
 
-Simplemente como padre y profesional de tecnología intentando resolver un problema que probablemente compartimos muchas familias.
+Las páginas que habíamos decidido restringir no se abrían y las protecciones hacían lo que se suponía que tenían que hacer.
 
-En los próximos artículos voy a ir desmontando cada una de estas capas: Windows, móviles, televisiones, Fire TV, DNS, router, VPN, videojuegos, límites de tiempo y las distintas formas que he encontrado de saltarse los controles.
+Hasta que un día mi hijo instaló en Chrome una herramienta que permitía navegar a través de una VPN.
 
-Y también contaré lo que **no me ha funcionado**.
+No hace falta saber qué es una VPN para entender lo que ocurrió.
 
-Porque posiblemente esa sea la parte más útil.
+Básicamente, encontró **otro camino para llegar a Internet**.
 
-El objetivo final será construir y publicar una configuración completa que cualquier padre pueda entender, adaptar y probar en su propia casa.
+Probamos de nuevo una de las páginas que estaba bloqueada.
 
-Y empezaré por una idea que me parece fundamental:
+Y se abrió.
 
-> **Si tienes instalado un control parental y nunca has intentado saltártelo, realmente no sabes si funciona.**
+Así de fácil.
 
-En el próximo artículo empezaré precisamente por ahí: por qué instalar una aplicación de control parental no significa que Internet esté bajo control.
+Tengo que reconocer que me sorprendió.
+
+Había dedicado tiempo a configurar las restricciones, había comprobado que funcionaban y, de repente, una pequeña herramienta instalada en el navegador conseguía evitar buena parte de ellas.
+
+Pero precisamente ahí empezó la parte más interesante del proyecto.
+
+## Cada vez que encontraba un agujero, intentábamos cerrarlo
+
+En lugar de verlo como un fracaso, lo convertimos en otra prueba.
+
+**Vale, has conseguido saltártelo. ¿Por qué?**
+
+Intentaba entender qué había ocurrido y buscaba una forma de evitarlo.
+
+Después volvíamos a probar.
+
+A veces funcionaba.
+
+Otras veces encontrábamos otra manera de evitar la protección.
+
+Y vuelta a empezar.
+
+Poco a poco fui cambiando mi manera de afrontar el problema.
+
+Ya no buscaba **“el mejor control parental”**.
+
+Intentaba combinar distintas medidas sencillas para que, si una fallaba, hubiera otra que siguiera ayudando a protegerle.
+
+Exactamente la misma idea que había utilizado durante años profesionalmente, pero trasladada a una casa.
+
+## Y descubrí algo todavía más importante
+
+Después de muchas pruebas también llegué a una conclusión que puede parecer contradictoria viniendo de alguien que trabaja en tecnología:
+
+**la tecnología no puede solucionar por sí sola este problema.**
+
+Podemos bloquear páginas.
+
+Podemos establecer horarios.
+
+Podemos impedir la instalación de determinadas aplicaciones.
+
+Podemos dificultar que se salten algunas restricciones.
+
+Todo eso ayuda.
+
+Pero siempre aparecerá algo nuevo. Y según nuestros hijos vayan creciendo, también tendrán más conocimientos, más autonomía y más capacidad para encontrar alternativas.
+
+Por eso no quiero que Conecta y Protege sea una página sobre cómo **vigilar a nuestros hijos**.
+
+Quiero que sea una página sobre cómo **reducir riesgos mientras les enseñamos poco a poco a protegerse ellos mismos**.
+
+La supervisión, hablar con ellos, explicarles por qué ponemos determinados límites y conseguir que acudan a nosotros cuando se encuentren con algo que les incomode o no entiendan es probablemente mucho más importante que cualquier herramienta que podamos instalar.
+
+## De ahí nace Conecta y Protege
+
+Decidí crear esta página porque pensé que todas aquellas pruebas, errores y soluciones podían ser útiles para otras familias.
+
+Y quiero hacerlo de una manera muy concreta.
+
+No voy a partir de la idea de que existe una solución perfecta, porque después de probar muchas cosas **sé que no existe**.
+
+Voy a contar lo que nosotros hemos probado.
+
+Qué problema queríamos solucionar.
+
+Qué hicimos.
+
+Qué funcionó.
+
+Qué consiguió saltarse mi hijo.
+
+Y qué tuvimos que cambiar después.
+
+Cuando sea necesario configurar algo, intentaré explicarlo paso a paso y sin asumir que quien está leyendo sabe de informática.
+
+Porque para proteger mejor a nuestros hijos **no deberíamos necesitar convertirnos en expertos en ciberseguridad**.
+
+Solo necesitamos entender un poco mejor los riesgos y conocer qué herramientas tenemos a nuestro alcance.
+
+Y mantener siempre presente algo que para mí se ha convertido en el principio fundamental de este proyecto:
+
+> **Los controles no eliminan el riesgo. Nos ayudan a reducirlo.**
+
+En el siguiente artículo contaré cómo montamos nuestras primeras protecciones, qué conseguimos bloquear y cómo empezamos a descubrir que **poner una barrera no significa necesariamente que nuestros hijos no puedan encontrar otra puerta**.
