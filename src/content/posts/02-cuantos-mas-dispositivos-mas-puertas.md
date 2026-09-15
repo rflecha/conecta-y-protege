@@ -185,34 +185,24 @@ Ese fue mi segundo gran aprendizaje:
 
 > **Antes de preguntarme cómo proteger todos los dispositivos, empecé a preguntarme cuántos dispositivos necesitábamos realmente proteger.**
 
-## Pero quedaba una puerta especialmente importante
+## ¿Y si protegemos también el punto por el que todos salen a Internet?
 
-Después de simplificar los dispositivos, el ordenador se convirtió en uno de los puntos en los que más me centré.
+Después de reducir y ordenar los dispositivos, apareció una pregunta bastante natural.
 
-Ahí podía controlar mejor qué usuario utilizaba mi hijo, qué podía instalar y qué contenidos podía consultar.
+Podía seguir configurando controles diferentes en el ordenador, la televisión, la consola o cualquier otro aparato. Y esos controles seguían siendo necesarios.
 
-Configuré las restricciones.
+Pero casi todos tenían algo en común: **para conectarse a Internet desde casa utilizaban la misma conexión**.
 
-Las comprobé.
+Así que empecé a fijarme en el aparato por el que pasa buena parte de ese tráfico: el router.
 
-Y funcionaban.
+Si el router es, de alguna manera, la puerta de salida de nuestra casa hacia Internet, parecía lógico preguntarse si también podía ayudarnos a proteger lo que pasa por ella.
 
-Hasta que, observando cómo utilizaba el ordenador, descubrí algo que volvió a cambiar mi planteamiento.
-
-Una sencilla herramienta instalada en Chrome conseguía acceder a páginas que yo había bloqueado.
-
-Era una VPN.
-
-Y aquello me llevó al siguiente problema:
-
-> **¿De qué sirve bloquear una página si existe otro camino para llegar hasta ella?**
-
-Eso será lo que veremos en el siguiente artículo.
+Y ahí empezó la siguiente parte del proyecto.
 
 ---
 
 ### Siguiente artículo
 
-**La VPN que se saltó nuestras restricciones**
+**El router: un buen lugar para empezar a proteger Internet en casa**
 
-Qué ocurrió, explicado sin tecnicismos, por qué un control que estaba funcionando dejó de hacerlo y qué opciones fui probando para solucionarlo.
+Qué papel tiene realmente el router, qué controles parentales puede ofrecernos y por qué proteger la conexión de casa puede complementar —pero no sustituir— los controles que ya tenemos en cada dispositivo.
