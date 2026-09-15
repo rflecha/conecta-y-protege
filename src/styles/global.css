@@ -52,8 +52,8 @@ h1,h2,h3 { line-height:1.1; letter-spacing:-.03em; }
 .button.primary:hover { background:var(--brand-strong); color:#fff; transform:translateY(-1px); }
 .button.secondary { background:#fff; color:var(--text); }
 .button.secondary:hover { color:var(--brand); transform:translateY(-1px); }
-.hero-photo { min-width:0; min-height:520px; overflow:hidden; background:#eaf4f6; }
-.hero-photo img { width:100%; height:100%; min-height:520px; object-fit:cover; object-position:42% center; }
+.hero-photo { min-width:0; min-height:520px; overflow:hidden; background:#eaf4f6; display:flex; align-items:center; justify-content:center; }
+.hero-photo img { width:100%; height:100%; min-height:520px; object-fit:contain; object-position:center; background:#f5f2ef; }
 .principles-strip { background:#fff; border-block:1px solid var(--line); }
 .principles-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px; padding:26px 0; }
 .principle { display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center; }
@@ -129,8 +129,8 @@ a.guide-card:hover { transform:translateY(-3px); color:inherit; box-shadow:0 14p
   .hero-copy { padding:52px 0 44px; }
   .hero-copy h1 { max-width:760px; }
   .lead { max-width:760px; }
-  .hero-photo,.hero-photo img { min-height:420px; }
-  .hero-photo img { object-position:center 44%; }
+  .hero-photo,.hero-photo img { min-height:0; }
+  .hero-photo img { height:auto; object-fit:contain; }
   .principles-grid { grid-template-columns:repeat(2,1fr); }
   .guide-grid { grid-template-columns:repeat(2,1fr); }
 }
@@ -142,8 +142,7 @@ a.guide-card:hover { transform:translateY(-3px); color:inherit; box-shadow:0 14p
   .nav-links a { padding:8px 0; white-space:nowrap; }
   .hero-copy { padding:42px 0 36px; }
   .hero-copy h1 { font-size:clamp(2.35rem,11.5vw,3.45rem); }
-  .hero-photo,.hero-photo img { min-height:300px; }
-  .hero-photo img { object-position:center; }
+  .hero-photo,.hero-photo img { min-height:0; }
   .principles-grid,.guide-grid,.grid-3 { grid-template-columns:1fr; }
   .section-heading-row { align-items:flex-start; flex-direction:column; }
   .subscribe-band { grid-template-columns:1fr; text-align:center; }
