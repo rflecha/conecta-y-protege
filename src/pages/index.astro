@@ -3,9 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+  .sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf());
 
-const latestPosts = posts.slice(0, 4);
+const seriesPosts = posts.slice(0, 4);
 ---
 
 <BaseLayout>
@@ -42,7 +42,7 @@ const latestPosts = posts.slice(0, 4);
         <div>
           <div class="eyebrow">Protección práctica</div>
           <h2>Entender, proteger y acompañar</h2>
-          <p>Guías para conocer los riesgos digitales y aplicar medidas concretas para reducirlos.</p>
+          <p>Una serie de artículos para recorrer el proceso paso a paso, desde el problema hasta las medidas que podemos aplicar en casa.</p>
         </div>
         <a class="text-link" href="/guias">Ver todas las guías →</a>
       </div>
@@ -53,16 +53,16 @@ const latestPosts = posts.slice(0, 4);
       </div>
 
       <div class="guide-grid">
-        {latestPosts.map((post, index) => (
+        {seriesPosts.map((post, index) => (
           <a class="guide-card" href={`/guias/${post.id}/`}>
             <div class={`guide-icon ${index % 2 === 0 ? 'blue' : 'green'}`}>{index + 1}</div>
             <h3>{post.data.title}</h3>
             <p>{post.data.description}</p>
-            <div class="guide-meta"><span>{post.data.category}</span><span>{post.data.readingTime ?? '10 min'}</span></div>
+            <div class="guide-meta"><span>Artículo {index + 1}</span><span>{post.data.readingTime ?? '10 min'}</span></div>
           </a>
         ))}
-        {latestPosts.length < 4 && (
-          <article class="guide-card muted-card"><div class="guide-icon purple">✦</div><h3>Más contenidos en preparación</h3><p>Seguiremos recorriendo paso a paso las medidas que podemos aplicar para reducir riesgos en casa.</p><div class="guide-meta"><span>Próximamente</span><span>—</span></div></article>
+        {seriesPosts.length < 4 && (
+          <article class="guide-card muted-card"><div class="guide-icon purple">✦</div><h3>Continuará...</h3><p>Seguiremos recorriendo paso a paso las medidas que podemos aplicar para reducir riesgos en casa.</p><div class="guide-meta"><span>Próximamente</span><span>—</span></div></article>
         )}
       </div>
 
