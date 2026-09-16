@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
 
-const featured = posts[0];
+const latestPosts = posts.slice(0, 4);
 ---
 
 <BaseLayout>
@@ -53,10 +53,17 @@ const featured = posts[0];
       </div>
 
       <div class="guide-grid">
-        {featured && (<a class="guide-card" href={`/guias/${featured.id}/`}><div class="guide-icon blue">▰</div><h3>{featured.data.title}</h3><p>{featured.data.description}</p><div class="guide-meta"><span>Nivel: Fácil</span><span>{featured.data.readingTime ?? '10 min'}</span></div></a>)}
-        <article class="guide-card muted-card"><div class="guide-icon green">▯</div><h3>Primer móvil: antes de dar el paso</h3><p>Qué riesgos conviene valorar, qué límites establecer y cómo preparar el dispositivo.</p><div class="guide-meta"><span>Próximamente</span><span>15 min</span></div></article>
-        <article class="guide-card muted-card"><div class="guide-icon purple">✦</div><h3>Videojuegos: riesgos y controles</h3><p>Tiempo de uso, comunicación con desconocidos, compras y contenidos: qué podemos limitar y qué debemos supervisar.</p><div class="guide-meta"><span>Próximamente</span><span>25 min</span></div></article>
-        <article class="guide-card muted-card"><div class="guide-icon amber">●●</div><h3>Redes sociales: más allá del filtro</h3><p>Privacidad, contacto con desconocidos, contenido sensible y bienestar digital: qué conviene conocer antes de configurar controles.</p><div class="guide-meta"><span>Próximamente</span><span>20 min</span></div></article>
+        {latestPosts.map((post, index) => (
+          <a class="guide-card" href={`/guias/${post.id}/`}>
+            <div class={`guide-icon ${index % 2 === 0 ? 'blue' : 'green'}`}>{index + 1}</div>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <div class="guide-meta"><span>{post.data.category}</span><span>{post.data.readingTime ?? '10 min'}</span></div>
+          </a>
+        ))}
+        {latestPosts.length < 4 && (
+          <article class="guide-card muted-card"><div class="guide-icon purple">✦</div><h3>Más contenidos en preparación</h3><p>Seguiremos recorriendo paso a paso las medidas que podemos aplicar para reducir riesgos en casa.</p><div class="guide-meta"><span>Próximamente</span><span>—</span></div></article>
+        )}
       </div>
 
       <div class="subscribe-band" id="suscribete"><div class="subscribe-icon">✉</div><div><h3>Nuevas guías para proteger mejor, no para vigilar más</h3><p>Información práctica sobre riesgos, controles y acompañamiento familiar.</p></div><a class="button primary" href="mailto:hola@conectayprotege.com?subject=Quiero%20suscribirme%20a%20Conecta%20y%20Protege">Suscribirme</a></div>
