@@ -18,11 +18,15 @@ Había horarios, algunas restricciones, contraseñas… En definitiva, esas cosa
 
 Hasta que empiezas a observar cómo utiliza la tecnología un niño de verdad.
 
-Y descubres algo curioso: *ellos no utilizan Internet como nosotros creemos que lo utilizan*.
+Y descubres algo curioso: **ellos no utilizan Internet como nosotros creemos que lo utilizan**.
 
 No necesariamente porque quieran saltarse nada. Simplemente prueban, pulsan, entran por otro sitio, descubren una función que tú ni sabías que existía… y, de vez en cuando, encuentran una puerta que habías dejado abierta sin darte cuenta.
 
 Ahí empezó Conecta y Protege.
+
+![Padre e hijo utilizando juntos un ordenador en casa, rodeados de distintos dispositivos conectados](/images/articulo1-control.webp)
+
+*Todo parecía estar bajo control… hasta que empecé a observar cómo se utilizaba realmente la tecnología en casa.*
 
 ## Cuando mi trabajo se cruzó con lo que ocurría en casa
 
@@ -38,11 +42,15 @@ En una empresa sabemos que ninguna medida de seguridad es perfecta. Por eso no c
 
 Y un día me hice una pregunta bastante sencilla:
 
-> *¿Podría aplicar esa misma filosofía en casa, pero sin convertirla en un departamento de informática?*
+> **¿Podría aplicar esa misma filosofía en casa, pero sin convertirla en un departamento de informática?**
 
 Porque tampoco era cuestión de montar un centro de operaciones de ciberseguridad al lado del sofá.
 
 Solo quería conseguir algo mucho más razonable: que mi hijo pudiera utilizar Internet reduciendo algunos de los riesgos que más me preocupaban.
+
+![Tecnología doméstica con móvil, consola, televisión, ordenador, tablet y router alrededor de un padre y su hijo](/images/articulo1-dispositivos.webp)
+
+*El escenario cambia, pero la idea no tanto: conocer por dónde puede aparecer el riesgo ayuda a decidir dónde tiene sentido poner límites.*
 
 ## El problema no es solamente lo que buscan
 
@@ -54,13 +62,13 @@ A un contenido se puede llegar desde un vídeo, un anuncio, un enlace dentro de 
 
 También están los contactos con desconocidos, el acceso a contenidos sexuales o violentos, determinados mensajes relacionados con la alimentación o la imagen corporal, las compras, las aplicaciones que intentan mantenernos conectados durante horas…
 
-Y hay riesgos mucho menos espectaculares pero muy cotidianos: *irse a dormir demasiado tarde por estar delante de una pantalla o pasar mucho más tiempo conectado del que habíamos acordado*.
+Y hay riesgos mucho menos espectaculares pero muy cotidianos: irse a dormir demasiado tarde por estar delante de una pantalla o pasar mucho más tiempo conectado del que habíamos acordado.
 
 No todos los riesgos son iguales. Y tampoco se solucionan de la misma manera.
 
 Ahí empecé a comprender algo que ahora me parece bastante evidente:
 
-> *Ningún control parental puede solucionarlo todo.*
+> **Ningún control parental puede solucionarlo todo.**
 
 ## Perfecto, solucionado… más o menos
 
@@ -80,11 +88,11 @@ Entonces corregía aquello.
 
 Y poco después aparecía otra puerta.
 
-Reconozco que el “perfecto, solucionado” cada vez me duraba menos.
+Reconozco que el «perfecto, solucionado» cada vez me duraba menos.
 
 Pero aquello, lejos de hacerme pensar que los controles no servían, me hizo cambiar la pregunta.
 
-Dejé de buscar *el control parental perfecto* y empecé a pensar en *cómo combinar distintas medidas para reducir el riesgo*.
+Dejé de buscar <u>el control parental perfecto</u> y empecé a pensar en **cómo combinar distintas medidas para reducir el riesgo**.
 
 Porque un control no tiene que ser perfecto para ser útil.
 
@@ -98,7 +106,7 @@ Podía entender técnicamente muchas de las cosas que estaban ocurriendo. Pero e
 
 Con el tiempo entendí que probablemente no existe una respuesta perfecta.
 
-Y también que la tecnología solo puede resolver una parte del problema.
+Y también que **la tecnología solo puede resolver una parte del problema**.
 
 Podemos bloquear determinados contenidos. Podemos establecer horarios. Podemos limitar aplicaciones. Podemos reducir muchas posibilidades de acceso.
 
@@ -108,7 +116,7 @@ Pero nuestros hijos crecen. Aprenden. Preguntan. Prueban cosas. Y poco a poco ne
 
 Por eso Conecta y Protege no pretende ser una página sobre cómo vigilar a nuestros hijos.
 
-Pretende ser una página sobre cómo reducir riesgos mientras les ayudamos a aprender a protegerse ellos mismos.
+Pretende ser una página sobre <u>cómo reducir riesgos mientras les ayudamos a aprender a protegerse ellos mismos</u>.
 
 ## No se trata de construir un muro
 
@@ -122,7 +130,11 @@ Quiero que pueda utilizarlo de una forma cada vez más autónoma, pero adecuada 
 
 Los filtros ayudan. Los horarios ayudan. Los controles parentales ayudan.
 
-Pero *acompañar, hablar, explicar por qué ponemos determinados límites y conseguir que exista confianza para contarnos algo que les haya incomodado es todavía más importante*.
+Pero *acompañar, hablar, explicar por qué ponemos determinados límites y conseguir que exista confianza para contarnos algo que les haya incomodado* es todavía más importante.
+
+![Padre e hijo compartiendo la tecnología desde el acompañamiento, la confianza y unos límites razonables](/images/articulo1-acompanamiento.webp)
+
+*No se trata de construir un muro alrededor de nuestros hijos. Se trata de acompañarlos mientras aprenden a moverse por un mundo que también es digital.*
 
 > **Los controles no eliminan el riesgo. Nos ayudan a reducirlo.**
 
@@ -138,9 +150,9 @@ Quiero contar lo que nosotros hemos ido encontrando en casa: qué problema quer�
 
 Cuando haya que configurar algo, intentaré explicarlo sin asumir que quien está leyendo sabe de informática. Y para quien quiera profundizar más, tendremos las guías técnicas aparte.
 
-Porque para proteger mejor a nuestros hijos no deberíamos necesitar convertirnos en expertos en ciberseguridad.
+Porque para proteger mejor a nuestros hijos <u>no deberíamos necesitar convertirnos en expertos en ciberseguridad</u>.
 
-Necesitamos entender un poco mejor los riesgos, conocer las herramientas que tenemos y utilizar algo que ninguna aplicación puede sustituir: *el sentido común como padres*.
+Necesitamos entender un poco mejor los riesgos, conocer las herramientas que tenemos y utilizar algo que ninguna aplicación puede sustituir: **el sentido común como padres**.
 
 ## Y esto solo era el principio…
 
