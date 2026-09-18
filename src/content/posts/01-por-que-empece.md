@@ -48,9 +48,9 @@ Porque tampoco era cuestión de montar un centro de operaciones de cibersegurida
 
 Solo quería conseguir algo mucho más razonable: que mi hijo pudiera utilizar Internet reduciendo algunos de los riesgos que más me preocupaban.
 
-![Tecnología doméstica con móvil, consola, televisión, ordenador, tablet y router alrededor de un padre y su hijo](/images/articulo1-dispositivos.webp)
+![Comparación entre la ciberseguridad en una empresa y la protección digital en casa](/images/articulo1-empresa-casa.webp)
 
-*El escenario cambia, pero la idea no tanto: conocer por dónde puede aparecer el riesgo ayuda a decidir dónde tiene sentido poner límites.*
+*El escenario cambia. La idea no tanto: conocer los riesgos y no confiar toda la protección a una sola medida.*
 
 ## El problema no es solamente lo que buscan
 
@@ -132,9 +132,9 @@ Los filtros ayudan. Los horarios ayudan. Los controles parentales ayudan.
 
 Pero *acompañar, hablar, explicar por qué ponemos determinados límites y conseguir que exista confianza para contarnos algo que les haya incomodado* es todavía más importante.
 
-![Padre e hijo compartiendo la tecnología desde el acompañamiento, la confianza y unos límites razonables](/images/articulo1-acompanamiento.webp)
+![Camino hacia la autonomía digital basado en proteger, acompañar y confiar](/images/articulo1-proteger-acompanar-confiar.webp)
 
-*No se trata de construir un muro alrededor de nuestros hijos. Se trata de acompañarlos mientras aprenden a moverse por un mundo que también es digital.*
+*Proteger cuando lo necesitan, acompañar mientras aprenden y confiar cada vez un poco más.*
 
 > **Los controles no eliminan el riesgo. Nos ayudan a reducirlo.**
 
