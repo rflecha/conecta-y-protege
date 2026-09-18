@@ -5,6 +5,9 @@ published: 2026-09-15
 category: "Control parental"
 readingTime: "7 min"
 draft: false
+type: article
+series: historia
+order: 2
 ---
 
 En el artículo anterior terminé con una idea que fue cambiando bastante mi forma de abordar la protección digital en casa:
@@ -198,11 +201,3 @@ Así que empecé a fijarme en el aparato por el que pasa buena parte de ese trá
 Si el router es, de alguna manera, la puerta de salida de nuestra casa hacia Internet, parecía lógico preguntarse si también podía ayudarnos a proteger lo que pasa por ella.
 
 Y ahí empezó la siguiente parte del proyecto.
-
----
-
-### Siguiente artículo
-
-**El router: un buen lugar para empezar a proteger Internet en casa**
-
-Qué papel tiene realmente el router, qué controles parentales puede ofrecernos y por qué proteger la conexión de casa puede complementar —pero no sustituir— los controles que ya tenemos en cada dispositivo.
