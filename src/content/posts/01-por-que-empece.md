@@ -5,6 +5,9 @@ published: 2026-09-15
 category: "Control parental"
 readingTime: "7 min"
 draft: false
+type: article
+series: historia
+order: 1
 ---
 
 Internet forma parte de la vida de nuestros hijos.
