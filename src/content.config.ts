@@ -10,6 +10,11 @@ const posts = defineCollection({
     category: z.string(),
     readingTime: z.string().optional(),
     draft: z.boolean().default(false),
+    type: z.enum(['article', 'technical']).default('article'),
+    series: z.string().optional(),
+    order: z.number().optional(),
+    relatedArticle: z.number().optional(),
+    level: z.string().optional(),
   }),
 });
 
