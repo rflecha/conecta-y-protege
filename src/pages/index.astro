@@ -1,73 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf());
-
-const seriesPosts = posts.slice(0, 4);
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+const seriesPosts = posts.filter((post) => post.data.type === 'article' && post.data.series === 'historia').sort((a,b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+const technicalGuides = posts.filter((post) => post.data.type === 'technical').sort((a,b) => b.data.published.valueOf() - a.data.published.valueOf());
 ---
-
 <BaseLayout>
-  <section class="hero hero-home">
-    <div class="container hero-split">
-      <div class="hero-copy">
-        <div class="eyebrow">Seguridad digital para familias</div>
-        <h1>No podemos aislarles del mundo digital.<br />Pero sí ayudarles a estar <span>más protegidos.</span></h1>
-        <p class="lead">La tecnología es una herramienta que ya forma parte de la vida de nuestros hijos. Conocer sus riesgos nos permite tomar mejores decisiones, establecer límites y aplicar medidas que reduzcan su exposición sin confiarlo todo a un filtro o a una aplicación.</p>
-        <div class="actions">
-          <a class="button primary" href="/guias">Ver guías →</a>
-          <a class="button secondary" href="/sobre-el-proyecto">Sobre el proyecto</a>
-        </div>
-      </div>
+  <section class="hero hero-home"><div class="container hero-split"><div class="hero-copy"><div class="eyebrow">Seguridad digital para familias</div><h1>No podemos aislarles del mundo digital.<br />Pero sí ayudarles a estar <span>más protegidos.</span></h1><p class="lead">La tecnología es una herramienta que ya forma parte de la vida de nuestros hijos. Conocer sus riesgos nos permite tomar mejores decisiones, establecer límites y aplicar medidas que reduzcan su exposición sin confiarlo todo a un filtro o a una aplicación.</p><div class="actions"><a class="button primary" href="/articulos">Empezar por el artículo 1 →</a><a class="button secondary" href="/sobre-el-proyecto">Sobre el proyecto</a></div></div><div class="hero-photo"><img src="/images/familia-mundo-digital-seguro.webp" width="1536" height="1024" loading="eager" fetchpriority="high" alt="Familia compartiendo un momento frente a un ordenador con el mensaje Un mundo digital más seguro" /></div></div></section>
 
-      <div class="hero-photo">
-        <img src="/images/familia-mundo-digital-seguro.webp" width="1536" height="1024" loading="eager" fetchpriority="high" alt="Familia compartiendo un momento frente a un ordenador con el mensaje Un mundo digital más seguro" />
-      </div>
-    </div>
-  </section>
+  <section class="principles-strip" id="recursos"><div class="container principles-grid"><article class="principle"><div class="principle-icon">◎</div><div><h3>Conocer los riesgos</h3><p>Entender qué pueden encontrarse nuestros hijos y cómo puede afectarles.</p></div></article><article class="principle"><div class="principle-icon">◈</div><div><h3>Reducir la exposición</h3><p>Configurar dispositivos, redes y servicios para limitar riesgos evitables.</p></div></article><article class="principle"><div class="principle-icon">◷</div><div><h3>Establecer límites</h3><p>Horarios, aplicaciones, contenidos y accesos adaptados a cada edad.</p></div></article><article class="principle"><div class="principle-icon">♥</div><div><h3>Supervisar y acompañar</h3><p>Porque ningún filtro o control parental sustituye la presencia de un adulto.</p></div></article></div></section>
 
-  <section class="principles-strip" id="recursos">
-    <div class="container principles-grid">
-      <article class="principle"><div class="principle-icon">◎</div><div><h3>Conocer los riesgos</h3><p>Entender qué pueden encontrarse nuestros hijos y cómo puede afectarles.</p></div></article>
-      <article class="principle"><div class="principle-icon">◈</div><div><h3>Reducir la exposición</h3><p>Configurar dispositivos, redes y servicios para limitar riesgos evitables.</p></div></article>
-      <article class="principle"><div class="principle-icon">◷</div><div><h3>Establecer límites</h3><p>Horarios, aplicaciones, contenidos y accesos adaptados a cada edad.</p></div></article>
-      <article class="principle"><div class="principle-icon">♥</div><div><h3>Supervisar y acompañar</h3><p>Porque ningún filtro o control parental sustituye la presencia de un adulto.</p></div></article>
-    </div>
-  </section>
+  <section class="section featured-guides"><div class="container">
+    <div class="section-heading-row"><div><div class="eyebrow">Empieza por aquí</div><h2>Una historia paso a paso para familias</h2><p>No hace falta saber de tecnología. El recorrido principal sigue un orden para que sea fácil entender por qué fui tomando cada decisión.</p></div><a class="text-link" href="/articulos">Ver todos los artículos →</a></div>
+    <div class="guide-grid">{seriesPosts.map((post) => (<a class="guide-card" href={`/guias/${post.id}/`}><div class={`guide-icon ${(post.data.order ?? 0) % 2 ? 'blue' : 'green'}`}>{post.data.order}</div><h3>{post.data.title}</h3><p>{post.data.description}</p><div class="guide-meta"><span>Artículo {post.data.order}</span><span>{post.data.readingTime ?? '10 min'}</span></div></a>))}<article class="guide-card muted-card"><div class="guide-icon purple">4</div><h3>Controles parentales: horarios, aplicaciones y contenidos</h3><p>Qué podemos controlar realmente y cómo combinar límites de tiempo, aplicaciones, servicios y contenidos.</p><div class="guide-meta"><span>Próximamente</span><span>—</span></div></article></div>
 
-  <section class="section featured-guides">
-    <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <div class="eyebrow">Protección práctica</div>
-          <h2>Entender, proteger y acompañar</h2>
-          <p>Una serie de artículos para recorrer el proceso paso a paso, desde el problema hasta las medidas que podemos aplicar en casa.</p>
-        </div>
-        <a class="text-link" href="/guias">Ver todas las guías →</a>
-      </div>
+    <div style="margin-top:64px;" class="section-heading-row"><div><div class="eyebrow">¿Quieres profundizar?</div><h2>Guías técnicas</h2><p>Configuraciones reales para quienes quieren ir un paso más allá. Son opcionales: puedes seguir la historia principal sin entrar en ellas.</p></div><a class="text-link" href="/guias-tecnicas">Ver guías técnicas →</a></div>
+    <div class="article-list">{technicalGuides.map((post) => (<a class="article-card" href={`/guias/${post.id}/`}><div class="article-meta">GUÍA TÉCNICA<br />Nivel {post.data.level ?? 'intermedio'}</div><div><h3>{post.data.title}</h3><p>{post.data.description}</p></div><div class="article-arrow">Ver configuración →</div></a>))}</div>
 
-      <div class="notice" style="margin-bottom: 24px;">
-        <strong>Los controles no eliminan el riesgo. Nos ayudan a reducirlo.</strong>
-        <p style="margin-bottom: 0;">El control parental puede limitar contenidos, horarios y accesos, pero no sustituye a la supervisión, la educación y el diálogo. La protección más eficaz combina herramientas técnicas con el acompañamiento de los padres.</p>
-      </div>
-
-      <div class="guide-grid">
-        {seriesPosts.map((post, index) => (
-          <a class="guide-card" href={`/guias/${post.id}/`}>
-            <div class={`guide-icon ${index % 2 === 0 ? 'blue' : 'green'}`}>{index + 1}</div>
-            <h3>{post.data.title}</h3>
-            <p>{post.data.description}</p>
-            <div class="guide-meta"><span>Artículo {index + 1}</span><span>{post.data.readingTime ?? '10 min'}</span></div>
-          </a>
-        ))}
-        {seriesPosts.length < 4 && (
-          <article class="guide-card muted-card"><div class="guide-icon purple">✦</div><h3>Continuará...</h3><p>Seguiremos recorriendo paso a paso las medidas que podemos aplicar para reducir riesgos en casa.</p><div class="guide-meta"><span>Próximamente</span><span>—</span></div></article>
-        )}
-      </div>
-
-      <div class="subscribe-band" id="suscribete"><div class="subscribe-icon">✉</div><div><h3>Nuevas guías para proteger mejor, no para vigilar más</h3><p>Información práctica sobre riesgos, controles y acompañamiento familiar.</p></div><a class="button primary" href="mailto:hola@conectayprotege.com?subject=Quiero%20suscribirme%20a%20Conecta%20y%20Protege">Suscribirme</a></div>
-      <p class="closing-note">La tecnología puede ayudar a proteger.<br /><strong>La supervisión y el acompañamiento siguen siendo esenciales.</strong></p>
-    </div>
-  </section>
+    <div class="notice" style="margin-top:48px;"><strong>Los controles no eliminan el riesgo. Nos ayudan a reducirlo.</strong><p style="margin-bottom:0;">La protección más eficaz combina herramientas técnicas con supervisión, educación y diálogo.</p></div>
+    <div class="subscribe-band" id="suscribete"><div class="subscribe-icon">✉</div><div><h3>Nuevas guías para proteger mejor, no para vigilar más</h3><p>Información práctica sobre riesgos, controles y acompañamiento familiar.</p></div><a class="button primary" href="mailto:hola@conectayprotege.com?subject=Quiero%20suscribirme%20a%20Conecta%20y%20Protege">Suscribirme</a></div>
+    <p class="closing-note">La tecnología puede ayudar a proteger.<br /><strong>La supervisión y el acompañamiento siguen siendo esenciales.</strong></p>
+  </div></section>
 </BaseLayout>
