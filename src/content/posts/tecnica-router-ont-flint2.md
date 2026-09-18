@@ -92,6 +92,18 @@ Ya no existía el WiFi del router anterior que pudiera volver a activarse y las 
 
 Había eliminado los dos caminos alternativos que había encontrado.
 
+### Y así queda en el mundo real…
+
+Sobre el papel todo queda bastante limpio: fibra, ONT, router, WiFi, Ethernet… cada cosa en su sitio.
+
+En la práctica, mi instalación ha terminado así:
+
+![Instalación real de la ONT y el GL.iNet Flint 2 en el cuadro de comunicaciones](/images/router_real.webp)
+
+**Bueno… ahora solo falta ordenar un poco los cables 😉**
+
+Más allá de la estética, lo importante es que la arquitectura ya es la que buscaba: la ONT recibe la fibra y el Flint 2 se convierte en el punto central por el que pasan tanto el WiFi como las conexiones Ethernet de casa.
+
 ## 6. La ONT también necesita su configuración
 
 Conectar físicamente una ONT a la fibra no significa necesariamente que vaya a funcionar sin más.
