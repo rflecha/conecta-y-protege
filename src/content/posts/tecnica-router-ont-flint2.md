@@ -114,23 +114,11 @@ Una **ONT** es, simplificando mucho, el dispositivo que termina la conexión de 
 
 Conseguí una ONT independiente y separé las dos funciones que antes realizaba el equipo de la operadora.
 
-La arquitectura pasó a ser:
+La arquitectura final quedó así:
 
-```text
-Internet
-   │
- Fibra
-   │
-   ▼
-  ONT
-   │ Ethernet
-   ▼
-Flint 2
-   │
-   ├── WiFi
-   ├── Tomas Ethernet de la vivienda
-   └── Dispositivos de casa
-```
+![Esquema de la arquitectura de red: fibra, ONT, Flint 2 como punto central y dispositivos conectados por WiFi y Ethernet](/images/esquema_router.png)
+
+*Esquema de mi instalación final. La fibra termina en una ONT independiente y el Flint 2 queda como punto central de la red. Tanto el WiFi como las tomas Ethernet de la vivienda pasan por el router donde aplico las reglas.*
 
 Este cambio era mucho más importante que simplemente sustituir un router por otro.
 
@@ -176,23 +164,13 @@ Introduje la dirección MAC del router antiguo y apliqué el cambio.
 
 Después de hacerlo, **la operadora comenzó a asignar una dirección IP al Flint 2 y la conexión a Internet empezó a funcionar con normalidad**.
 
-> **Importante:** la dirección MAC que aparece en mis capturas se ha ocultado deliberadamente. Si necesitas realizar una configuración similar, debes utilizar los datos de tu propio equipo y conexión.
+> **Importante:** si comparto capturas de esta configuración, oculto datos como la dirección MAC, direcciones de red o códigos QR. Si necesitas realizar una configuración similar, debes utilizar exclusivamente los datos de tu propio equipo y conexión.
 
 ## 8. Cómo comprobé que la arquitectura estaba funcionando
 
 Una vez realizados los cambios, no me limité a comprobar que podía abrir una página web.
 
 Quería verificar que la arquitectura hacía realmente lo que pretendía.
-
-La prueba conceptual era sencilla:
-
-```text
-              ┌── WiFi ─────────────┐
-              │                     │
-Dispositivos ─┼── Ethernet ─────────┼──► Flint 2 ──► ONT ──► Internet
-              │                     │
-              └── Red de casa ──────┘
-```
 
 Ya no debía existir un router anterior proporcionando una segunda WiFi o una conexión Ethernet alternativa.
 
