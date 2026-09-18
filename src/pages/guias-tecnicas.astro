@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const guides = (await getCollection('posts', ({ data }) => !data.draft && data.type === 'technical')).sort((a,b) => b.data.published.valueOf() - a.data.published.valueOf());
+---
+<BaseLayout title="Guías técnicas" description="Configuraciones paso a paso para quienes quieren profundizar en la protección de su red y sus dispositivos.">
+  <section class="container page-head">
+    <div class="eyebrow">Para profundizar</div>
+    <h1>Guías técnicas</h1>
+    <p class="lead">Configuraciones reales, pruebas y soluciones para quienes quieren ir un paso más allá. No necesitas leerlas para seguir la historia principal.</p>
+  </section>
+  <section class="container section">
+    <div class="article-list">
+      {guides.map((post) => (
+        <a class="article-card" href={`/guias/${post.id}/`}>
+          <div class="article-meta">GUÍA TÉCNICA<br />Nivel {post.data.level ?? 'intermedio'}</div>
+          <div><h3>{post.data.title}</h3><p>{post.data.description}</p></div>
+          <div class="article-arrow">Ver configuración →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
