@@ -5,6 +5,9 @@ published: 2026-09-18
 category: "Guía técnica"
 readingTime: "12 min"
 draft: false
+type: technical
+relatedArticle: 3
+level: intermedio
 ---
 
 > **Nivel: intermedio**  
