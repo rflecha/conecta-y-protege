@@ -122,7 +122,7 @@ Después empecé a preguntarme:
 
 Parece una diferencia pequeña, pero simplifica bastante las cosas.
 
-![Padre e hijo revisando juntos los controles de un dispositivo, siguiendo un proceso sencillo de entender, configurar, probar, ajustar y mantener](/images/articulo2-simplificar-movil.webp)
+![Padre e hijo revisando juntos los controles de un dispositivo, siguiendo un proceso sencillo de entender, configurar, probar, ajustar y mantener](/images/articulo2-simplificar-movil-v2.webp)
 
 *No se trata de hacerlo perfecto. Se trata de ir paso a paso y ajustar lo que realmente necesita cada dispositivo.*
 
@@ -160,7 +160,7 @@ Y no pasa nada.
 
 No necesitamos crear un sistema imposible de saltar. Necesitamos uno que sea razonable para la edad de nuestros hijos, que podamos mantener y que vaya acompañado de normas y conversación.
 
-![Niño utilizando una tablet para aprender, jugar, crear y comunicarse en un entorno digital acompañado y equilibrado](/images/articulo2-tecnologia-suma-movil.webp)
+![Niño utilizando una tablet para aprender, jugar, crear y comunicarse en un entorno digital acompañado y equilibrado](/images/articulo2-tecnologia-suma-movil-v2.webp)
 
 *La tecnología también suma. Bien utilizada puede servir para aprender, crear, jugar y comunicarse. La cuestión está en encontrar el equilibrio.*
 
