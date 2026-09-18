@@ -142,7 +142,7 @@ Y esa diferencia es importante.
 
 ## De ahí nace Conecta y Protege
 
-Decidí crear esta página porque pensé que todo lo que fui probando, lo que funcionó y —quizá todavía más interesante— *lo que no funcionó como esperaba*, podía resultar útil para otras familias.
+Decidí crear esta página porque pensé que todo lo que fui probando y lo que funcionó podía resultar útil para otras familias. Y también, quizás más todavía, aquellas cosas que no funcionaron como esperaba.
 
 No quiero escribir desde la teoría ni dar recetas mágicas.
 
