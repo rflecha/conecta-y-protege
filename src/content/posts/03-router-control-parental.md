@@ -5,6 +5,9 @@ published: 2026-09-18
 category: "Control parental"
 readingTime: "8 min"
 draft: false
+type: article
+series: historia
+order: 3
 ---
 
 En el artículo anterior terminé haciéndome una pregunta bastante lógica.
@@ -253,26 +256,4 @@ Pero tampoco necesitaba que lo fuera.
 
 Era considerablemente mejor que depender de una única barrera.
 
-Y durante un tiempo las restricciones funcionaron como esperaba.
-
-Hasta que observé algo curioso.
-
-Una página que debía estar bloqueada se abría desde el ordenador.
-
-La protección seguía activa.
-
-La configuración no había cambiado.
-
-Pero el navegador había encontrado **otro camino para llegar a Internet**.
-
-Mi hijo había instalado una VPN en Chrome.
-
-Y aquello me hizo descubrir una nueva debilidad del sistema.
-
----
-
-### Siguiente artículo
-
-**La VPN que se saltó nuestras restricciones**
-
-Qué es una VPN explicado para quienes no saben de redes, por qué puede conseguir evitar algunos controles parentales y qué hice cuando descubrí que bloquear una VPN concreta solo solucionaba una parte del problema.
+El siguiente paso, para una familia que no quiera entrar en configuraciones de red, es mucho más cotidiano: entender qué permiten realmente los controles parentales de nuestros dispositivos y servicios, desde los horarios hasta las aplicaciones y los contenidos.
