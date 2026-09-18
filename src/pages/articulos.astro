@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const articles = (await getCollection('posts', ({ data }) => !data.draft && data.type === 'article' && data.series === 'historia')).sort((a,b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+---
+<BaseLayout title="Artículos" description="La historia de Conecta y Protege, paso a paso y sin necesidad de conocimientos técnicos.">
+  <section class="container page-head">
+    <div class="eyebrow">Empieza por aquí</div>
+    <h1>Una historia paso a paso para familias</h1>
+    <p class="lead">No hace falta saber de tecnología. Te cuento qué problemas fui encontrando, qué aprendí y qué medidas podemos aplicar para reducir riesgos.</p>
+  </section>
+  <section class="container section">
+    <div class="article-list">
+      {articles.map((post) => (
+        <a class="article-card" href={`/guias/${post.id}/`}>
+          <div class="article-meta">ARTÍCULO {String(post.data.order).padStart(2,'0')}<br />Para todos</div>
+          <div><h3>{post.data.title}</h3><p>{post.data.description}</p></div>
+          <div class="article-arrow">Leer →</div>
+        </a>
+      ))}
+      <article class="article-card" style="opacity:.72;">
+        <div class="article-meta">ARTÍCULO 04<br />Próximamente</div>
+        <div><h3>Controles parentales: horarios, aplicaciones y contenidos</h3><p>Qué podemos controlar realmente y cómo combinar límites de tiempo, aplicaciones, servicios y contenidos.</p></div>
+        <div class="article-arrow">En preparación</div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
