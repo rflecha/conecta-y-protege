@@ -1,6 +1,6 @@
 ---
 title: "Por qué empecé a intentar hacer Internet más seguro para mi hijo"
-description: "Cómo una preocupación como padre terminó convirtiéndose en un proyecto para entender los riesgos de Internet y comprobar hasta dónde funcionan realmente los controles parentales."
+description: "Cómo una preocupación como padre terminó convirtiéndose en un proyecto para entender mejor los riesgos de Internet y comprobar hasta dónde funcionan realmente los controles parentales."
 published: 2026-09-15
 category: "Control parental"
 readingTime: "7 min"
@@ -10,144 +10,160 @@ series: historia
 order: 1
 ---
 
-Internet forma parte de la vida de nuestros hijos.
+## Todo parecía estar bajo control
 
-Podemos retrasar el momento en que tengan su primer móvil, limitar el tiempo que pasan delante de una pantalla o decidir qué aplicaciones pueden utilizar. Pero llega un momento en el que tienen acceso a Internet, ya sea desde un ordenador, una tablet, el móvil, la televisión o incluso una consola.
+Todo empezó con una sensación bastante habitual como padre: **creía que tenía Internet razonablemente controlado en casa**.
 
-Y ahí empiezan las dudas.
+Había horarios, algunas restricciones, contraseñas… En definitiva, esas cosas que configuras y que te dejan razonablemente tranquilo.
 
-¿Qué pueden encontrarse? ¿Cómo podemos evitar que accedan a determinados contenidos? ¿Con quién pueden hablar? ¿Podemos controlar el tiempo que pasan conectados? ¿Son realmente eficaces los controles parentales?
+Hasta que empiezas a observar cómo utiliza la tecnología un niño de verdad.
 
-Yo también me hice todas esas preguntas.
+Y descubres algo curioso: **ellos no utilizan Internet como nosotros creemos que lo utilizan**.
 
-Y así empezó este proyecto.
+No necesariamente porque quieran saltarse nada. Simplemente prueban, pulsan, entran por otro sitio, descubren una función que tú ni sabías que existía… y, de vez en cuando, encuentran una puerta que habías dejado abierta sin darte cuenta.
 
-## Cuando tu trabajo se cruza con lo que ocurre en casa
+Ahí empezó Conecta y Protege.
 
-Llevo más de veinte años trabajando en tecnología y durante parte de mi trayectoria profesional una de mis responsabilidades ha sido la ciberseguridad de una compañía.
+## Cuando mi trabajo se cruzó con lo que ocurría en casa
 
-Cuando empecé a preocuparme más seriamente por la seguridad de mi hijo en Internet, inevitablemente terminé relacionando las dos cosas.
+Llevo más de veinte años trabajando en tecnología y durante parte de mi trayectoria profesional he sido responsable de ciberseguridad en una compañía.
 
-En una empresa dedicamos mucho esfuerzo a proteger la información y los sistemas. Y hay una idea que tenemos bastante asumida:
+En el trabajo hablábamos de firewalls, vulnerabilidades, capas de protección, gestión de riesgos…
 
-**ninguna medida de seguridad es perfecta.**
+**En casa el escenario era bastante diferente: un niño con curiosidad y mucho tiempo para pulsar botones.**
 
-No confiamos toda la seguridad a una única herramienta. Ponemos diferentes barreras porque sabemos que alguna puede fallar.
+Y, sorprendentemente, muchas de las ideas que utilizamos profesionalmente tenían bastante sentido también en casa.
 
-Y un día me pregunté:
+En una empresa sabemos que ninguna medida de seguridad es perfecta. Por eso no confiamos toda la protección a una única herramienta. Ponemos distintas barreras porque asumimos que alguna puede fallar.
 
-> **¿Por qué no aplicar esa misma idea en casa, pero de una forma sencilla?**
+Y un día me hice una pregunta bastante sencilla:
 
-No pretendía convertir mi casa en una empresa ni llenar los ordenadores de complicadas herramientas de seguridad.
+> **¿Podría aplicar esa misma filosofía en casa, pero sin convertirla en un departamento de informática?**
 
-Simplemente quería comprobar si podía crear un entorno en el que mi hijo pudiera utilizar Internet reduciendo algunos de los riesgos que más me preocupaban.
+Porque tampoco era cuestión de montar un centro de operaciones de ciberseguridad al lado del sofá.
 
-## Porque el problema no es solamente lo que buscan
+Solo quería conseguir algo mucho más razonable: que mi hijo pudiera utilizar Internet reduciendo algunos de los riesgos que más me preocupaban.
 
-Creo que este fue uno de mis primeros cambios de perspectiva.
+## El problema no es solamente lo que buscan
 
-Cuando hablamos de proteger a nuestros hijos en Internet es fácil pensar únicamente en evitar que busquen determinadas cosas.
+Al principio es fácil pensar que proteger a un niño en Internet consiste básicamente en impedir que busque determinadas cosas.
 
-Pero no siempre son ellos quienes las buscan.
+Pero Internet no funciona así.
 
-Pueden llegar a contenidos inadecuados desde un vídeo, un anuncio, un enlace dentro de un juego o una búsqueda aparentemente inocente.
+A un contenido se puede llegar desde un vídeo, un anuncio, un enlace dentro de un juego, una búsqueda aparentemente inocente o una recomendación automática.
 
-También pueden contactar con desconocidos o ser contactados por ellos.
+También están los contactos con desconocidos, el acceso a contenidos sexuales o violentos, determinados mensajes relacionados con la alimentación o la imagen corporal, las compras, las aplicaciones que intentan mantenernos conectados durante horas…
 
-Y existen otros riesgos menos evidentes: pasar demasiadas horas conectados, utilizar dispositivos hasta muy tarde, encontrarse con contenidos relacionados con conductas alimentarias poco saludables, violencia, pornografía o espacios diseñados para mantener su atención durante el mayor tiempo posible.
+Y hay riesgos mucho menos espectaculares pero muy cotidianos: **irse a dormir demasiado tarde por estar delante de una pantalla o pasar mucho más tiempo conectado del que habíamos acordado**.
 
-No todos los riesgos son iguales ni pueden solucionarse de la misma manera.
+No todos los riesgos son iguales. Y tampoco se solucionan de la misma manera.
 
-Y, sobre todo, **ninguna aplicación de control parental puede solucionarlos todos**.
+Ahí empecé a comprender algo que ahora me parece bastante evidente:
 
-## Empecé a poner algunas barreras
+> **Ningún control parental puede solucionarlo todo.**
 
-Así que empecé a configurar algunas protecciones en casa.
+## Perfecto, solucionado… más o menos
 
-No buscaba controlar absolutamente todo lo que hacía mi hijo ni convertir Internet en un espacio cerrado. Quería poner límites razonables y reducir la posibilidad de que llegara fácilmente a determinados contenidos o servicios que no consideraba adecuados para su edad.
+Empecé a poner algunas barreras.
 
-Al principio, como probablemente hacemos muchos padres, comprobaba que las restricciones estuvieran activadas y que aquello que había decidido limitar realmente estuviera bloqueado.
+Horarios. Restricciones. Bloqueos de determinados contenidos y servicios.
 
-Y en muchas situaciones funcionaba perfectamente.
+Configuraba algo, lo probaba y pensaba:
 
-Pero con el uso cotidiano empecé a observar algo que no había tenido suficientemente en cuenta: **había más formas de llegar a Internet de las que yo había previsto**.
+**Perfecto. Solucionado.**
 
-A veces era una aplicación, otras una función de un dispositivo o simplemente un camino diferente al que yo había probado al configurar las restricciones.
+Hasta que, con el uso cotidiano, aparecía otra forma de llegar al mismo sitio.
 
-No hacía falta hacer nada especialmente sofisticado. Muchas veces era simplemente cuestión de explorar y utilizar la tecnología de una forma distinta a como lo hacemos los adultos.
+Entonces corregía aquello.
 
-Y aquello cambió mi manera de afrontar el problema.
+**Perfecto. Ahora sí.**
 
-## Cuando descubrí que los controles también tienen límites
+Y poco después aparecía otra puerta.
 
-En lugar de limitarme a corregir cada problema según aparecía, empecé a intentar entender por qué se producía.
+Reconozco que el “perfecto, solucionado” cada vez me duraba menos.
 
-Si una protección funcionaba de una manera pero podía evitarse de otra, buscaba la forma de reducir también esa posibilidad.
+Pero aquello, lejos de hacerme pensar que los controles no servían, me hizo cambiar la pregunta.
 
-Después observaba cómo funcionaba con el uso normal.
+Dejé de buscar **el control parental perfecto** y empecé a pensar en **cómo combinar distintas medidas para reducir el riesgo**.
 
-Poco a poco dejé de buscar **“el mejor control parental”**.
+Porque un control no tiene que ser perfecto para ser útil.
 
-Empecé a pensar que quizá era más eficaz combinar distintas medidas sencillas y, sobre todo, reducir el número de lugares desde los que había que controlar el acceso.
+## Primero padre. Después informático.
 
-Exactamente la misma idea que había utilizado durante años profesionalmente, pero trasladada a una casa y simplificada para que fuera manejable.
+Hay algo que también fui aprendiendo durante todo este proceso.
 
-## Y descubrí algo todavía más importante
+Podía entender técnicamente muchas de las cosas que estaban ocurriendo. Pero eso no eliminaba las mismas dudas que tenemos muchos padres.
 
-Con el tiempo también llegué a una conclusión que puede parecer contradictoria viniendo de alguien que trabaja en tecnología:
+**¿Estoy poniendo demasiados límites?**
 
-**la tecnología no puede solucionar por sí sola este problema.**
+**¿Me estoy quedando corto?**
 
-Podemos bloquear determinados contenidos.
+**¿Hasta dónde debo controlar?**
 
-Podemos establecer horarios.
+**¿Y cuándo tengo que empezar simplemente a confiar?**
 
-Podemos limitar aplicaciones o funciones.
+Con el tiempo entendí que probablemente no existe una respuesta perfecta.
 
-Podemos reducir muchas posibilidades de acceso.
+Y también que la tecnología solo puede resolver una parte del problema.
+
+Podemos bloquear determinados contenidos. Podemos establecer horarios. Podemos limitar aplicaciones. Podemos reducir muchas posibilidades de acceso.
 
 Todo eso ayuda.
 
-Pero nuestros hijos crecen, aprenden y utilizan la tecnología de maneras que nosotros no siempre habíamos previsto.
+Pero nuestros hijos crecen. Aprenden. Preguntan. Prueban cosas. Y poco a poco necesitan también más autonomía.
 
-Por eso no quiero que Conecta y Protege sea una página sobre cómo **vigilar a nuestros hijos**.
+Por eso **Conecta y Protege no pretende ser una página sobre cómo vigilar a nuestros hijos**.
 
-Quiero que sea una página sobre cómo **reducir riesgos mientras les enseñamos poco a poco a protegerse ellos mismos**.
+Pretende ser una página sobre cómo reducir riesgos mientras les ayudamos a aprender a protegerse ellos mismos.
 
-La supervisión, hablar con ellos, explicarles por qué ponemos determinados límites y conseguir que acudan a nosotros cuando se encuentren con algo que les incomode o no entiendan es probablemente mucho más importante que cualquier herramienta que podamos instalar.
+## No se trata de construir un muro
 
-## De ahí nace Conecta y Protege
+Esta es probablemente la idea más importante de todo el proyecto.
 
-Decidí crear esta página porque pensé que todas aquellas pruebas, errores y soluciones podían ser útiles para otras familias.
+Internet forma parte de su vida y también ofrece cosas fantásticas: aprender, crear, jugar, comunicarse, descubrir intereses y acceder a una cantidad de conocimiento que nosotros ni imaginábamos cuando teníamos su edad.
 
-Y quiero hacerlo de una manera muy concreta.
+No quiero aislar a mi hijo de todo eso.
 
-No voy a partir de la idea de que existe una solución perfecta, porque después de probar muchas cosas **sé que no existe**.
+Quiero que pueda utilizarlo de una forma cada vez más autónoma, pero adecuada a su edad.
 
-Voy a contar lo que nosotros hemos ido encontrando en casa.
+Los filtros ayudan.
 
-Qué problema quería solucionar.
+Los horarios ayudan.
 
-Qué hice.
+Los controles parentales ayudan.
 
-Qué funcionó.
-
-Qué limitaciones fui descubriendo.
-
-Y qué tuve que cambiar después.
-
-Cuando sea necesario configurar algo, intentaré explicarlo paso a paso y sin asumir que quien está leyendo sabe de informática.
-
-Porque para proteger mejor a nuestros hijos **no deberíamos necesitar convertirnos en expertos en ciberseguridad**.
-
-Solo necesitamos entender un poco mejor los riesgos y conocer qué herramientas tenemos a nuestro alcance.
-
-Y mantener siempre presente algo que para mí se ha convertido en el principio fundamental de este proyecto:
+Pero **acompañar, hablar, explicar por qué ponemos determinados límites y conseguir que exista confianza para contarnos algo que les haya incomodado es todavía más importante**.
 
 > **Los controles no eliminan el riesgo. Nos ayudan a reducirlo.**
 
-En los siguientes artículos iré contando esos descubrimientos uno a uno: los diferentes dispositivos de casa, los controles que parecían funcionar hasta que aparecía otra forma de acceder, las restricciones que fui incorporando y también las que no dieron el resultado que esperaba.
+Y esa diferencia es importante.
 
-Porque una de las primeras cosas que aprendí fue muy sencilla:
+## De ahí nace Conecta y Protege
 
-> **Antes de añadir más controles, quizá conviene reducir el número de puertas que tenemos que controlar.**
+Decidí crear esta página porque pensé que todo lo que fui probando, lo que funcionó y —quizá todavía más interesante— **lo que no funcionó como esperaba**, podía resultar útil para otras familias.
+
+No quiero escribir desde la teoría ni dar recetas mágicas.
+
+Quiero contar lo que nosotros hemos ido encontrando en casa:
+
+qué problema quería solucionar, qué probé, qué ocurrió realmente y qué tuve que cambiar después.
+
+Cuando haya que configurar algo, intentaré explicarlo sin asumir que quien está leyendo sabe de informática. Y para quien quiera profundizar más, tendremos las guías técnicas aparte.
+
+Porque para proteger mejor a nuestros hijos **no deberíamos necesitar convertirnos en expertos en ciberseguridad**.
+
+Necesitamos entender un poco mejor los riesgos, conocer las herramientas que tenemos y utilizar algo que ninguna aplicación puede sustituir: **el sentido común como padres**.
+
+## Y esto solo era el principio…
+
+Al principio pensé que el siguiente paso sería buscar mejores controles.
+
+Pero estaba mirando el problema desde el lugar equivocado.
+
+Antes de proteger cada dispositivo había una pregunta mucho más sencilla:
+
+> **¿Cuántos dispositivos necesitábamos realmente tener conectados?**
+
+Porque ordenador, tablet, televisión, consola, móvil… cada dispositivo añadía sus propias aplicaciones, sus propios controles y, como descubriría después, también sus propios pequeños agujeros.
+
+Y ahí empezó mi siguiente descubrimiento.
