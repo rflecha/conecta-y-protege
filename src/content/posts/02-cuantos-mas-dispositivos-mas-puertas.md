@@ -26,6 +26,10 @@ No porque todos esos dispositivos se utilicen igual, sino porque casi todos tien
 
 Y cada uno viene con su propio pequeño manual de instrucciones. Bueno, en realidad con un manual que probablemente ninguno vamos a leer.
 
+![Padre e hijo frente a los distintos dispositivos conectados de casa, cada uno con sus propias posibilidades y controles](/images/articulo2-cada-dispositivo.webp)
+
+*Cuando empiezas a contar ordenador, televisión, consola, tablet, móvil... descubres que cada dispositivo es un pequeño mundo.*
+
 ## Cada aparato tiene sus propias reglas
 
 Aquí apareció uno de los primeros problemas prácticos.
@@ -118,6 +122,10 @@ Después empecé a preguntarme:
 
 Parece una diferencia pequeña, pero simplifica bastante las cosas.
 
+![Proceso sencillo para entender, configurar, probar y ajustar los controles de los dispositivos que realmente necesitamos](/images/articulo2-simplificar.webp)
+
+*No se trata de hacerlo perfecto. Se trata de simplificar, probar lo que necesitamos y ajustar con el uso real.*
+
 ## Menos dispositivos también significa menos mantenimiento
 
 Hay otra ventaja que al principio no había tenido en cuenta.
@@ -151,6 +159,10 @@ Lo que fui aprendiendo es que **reducir el riesgo no es lo mismo que eliminarlo*
 Y no pasa nada.
 
 No necesitamos crear un sistema imposible de saltar. Necesitamos uno que sea razonable para la edad de nuestros hijos, que podamos mantener y que vaya acompañado de normas y conversación.
+
+![Niño disfrutando de la tecnología para jugar, aprender, crear y comunicarse dentro de un entorno con límites razonables](/images/articulo2-tecnologia-suma.webp)
+
+*La tecnología también suma. El objetivo no es quitar posibilidades, sino encontrar un equilibrio entre lo que aporta y los riesgos que queremos reducir.*
 
 ## La casa empezó a parecerme más sencilla
 
