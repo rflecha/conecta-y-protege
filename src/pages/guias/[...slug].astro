@@ -4,27 +4,56 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }));
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const articles = allPosts.filter((item) => item.data.type === 'article' && item.data.series === 'historia').sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+const currentIndex = post.data.type === 'article' ? articles.findIndex((item) => item.id === post.id) : -1;
+const previousArticle = currentIndex > 0 ? articles[currentIndex - 1] : undefined;
+const nextArticle = currentIndex >= 0 && currentIndex < articles.length - 1 ? articles[currentIndex + 1] : undefined;
+const relatedGuides = post.data.type === 'article' && post.data.order ? allPosts.filter((item) => item.data.type === 'technical' && item.data.relatedArticle === post.data.order) : [];
+const parentArticle = post.data.type === 'technical' && post.data.relatedArticle ? articles.find((item) => item.data.order === post.data.relatedArticle) : undefined;
+const parentIndex = parentArticle ? articles.findIndex((item) => item.id === parentArticle.id) : -1;
+const afterParent = parentIndex >= 0 && parentIndex < articles.length - 1 ? articles[parentIndex + 1] : undefined;
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description} canonical={`/guias/${post.id}/`}>
   <article class="article">
     <header>
-      <div class="eyebrow">{post.data.category}</div>
+      <div class="eyebrow">{post.data.type === 'technical' ? `Guía técnica${post.data.level ? ` · Nivel ${post.data.level}` : ''}` : `Artículo ${post.data.order ?? ''} · Para todos`}</div>
       <h1>{post.data.title}</h1>
       <p class="lead">{post.data.description}</p>
-      <div class="meta">
-        {post.data.published.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
-        {post.data.readingTime ? ` · ${post.data.readingTime} de lectura` : ''}
-      </div>
+      <div class="meta">{post.data.published.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}{post.data.readingTime ? ` · ${post.data.readingTime} de lectura` : ''}</div>
     </header>
     <Content />
+
+    {post.data.type === 'article' && (
+      <section style="margin-top:48px; border-top:1px solid #dfe7e5; padding-top:32px;">
+        {relatedGuides.length > 0 && (
+          <div class="notice" style="margin-bottom:24px;">
+            <div class="eyebrow">¿Quieres profundizar?</div>
+            {relatedGuides.map((guide) => (
+              <div style="margin-top:12px;"><strong>{guide.data.title}</strong><p>{guide.data.description}</p><a class="button secondary" href={`/guias/${guide.id}/`}>🔧 Ver guía técnica →</a></div>
+            ))}
+          </div>
+        )}
+        <div class="eyebrow">Continúa la historia</div>
+        <div style="display:flex; gap:16px; justify-content:space-between; flex-wrap:wrap; margin-top:12px;">
+          {previousArticle ? <a class="button secondary" href={`/guias/${previousArticle.id}/`}>← Artículo {previousArticle.data.order}</a> : <span></span>}
+          {nextArticle ? <a class="button primary" href={`/guias/${nextArticle.id}/`}>Artículo {nextArticle.data.order}: {nextArticle.data.title} →</a> : <div><strong>Próximo artículo:</strong><br />Controles parentales: horarios, aplicaciones y contenidos</div>}
+        </div>
+      </section>
+    )}
+
+    {post.data.type === 'technical' && (
+      <section class="notice" style="margin-top:48px;">
+        <div class="eyebrow">Volver a la historia</div>
+        {parentArticle && <p>Esta guía amplía la parte técnica del <strong>Artículo {parentArticle.data.order}: {parentArticle.data.title}</strong>.</p>}
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">{parentArticle && <a class="button secondary" href={`/guias/${parentArticle.id}/`}>← Volver al artículo {parentArticle.data.order}</a>}{afterParent && <a class="button primary" href={`/guias/${afterParent.id}/`}>Continuar la historia →</a>}</div>
+      </section>
+    )}
   </article>
 </BaseLayout>
