@@ -14,9 +14,7 @@ En el artículo sobre el router expliqué una idea bastante sencilla: si varios 
 
 La teoría era sencilla. Conseguir que **todos los caminos hacia Internet pasaran realmente por ese router** fue algo más complicado.
 
-Mi configuración actual no nació de una vez. Fui modificándola a medida que encontraba caminos que permitían evitar las restricciones que había establecido.
-
-Y algunos eran sorprendentemente sencillos.
+Mi configuración actual no nació de una vez. Fui modificándola a medida que encontraba caminos que permitían evitar las restricciones que había establecido. Y algunos eran sorprendentemente sencillos.
 
 ## 1. El punto de partida: el router de la operadora
 
@@ -26,85 +24,51 @@ Había además una razón práctica importante: **la fibra óptica llegaba direc
 
 Por tanto, no podía retirar simplemente el equipo de la operadora y conectar otro router en su lugar.
 
-Mi primera arquitectura fue aproximadamente esta:
+![Punto de partida de mi red doméstica con el router de la operadora](/images/router1.png)
 
-```text
-Fibra
-  │
-  ▼
-Router de la operadora
-  │
-  ├── WiFi desactivado
-  │
-  └── Flint 2
-         │
-         └── Dispositivos que quería controlar
-```
+*El punto de partida: el equipo de la operadora concentraba la conexión de fibra, el WiFi y las conexiones Ethernet de la vivienda.*
 
-La idea parecía razonable: mantener el router de la operadora para recibir la fibra, desactivar su WiFi y colocar detrás un segundo router donde aplicaría las restricciones.
+Mi primera idea fue mantener ese router para recibir la fibra, desactivar su WiFi y conectar detrás el GL.iNet Flint 2, donde aplicaría las restricciones.
 
-Sobre el papel funcionaba.
+Sobre el papel parecía una solución bastante razonable. El problema es que el router antiguo seguía formando parte de la red y, con él, seguían existiendo caminos para acceder a Internet sin pasar por las reglas del GL.iNet.
 
-Pero había dejado caminos alternativos.
+## 2. El problema no era solo el WiFi
 
-## 2. El primer agujero estaba en un botón
+Una de las primeras medidas que tomé fue desactivar el WiFi del router de la operadora. De esta forma, los dispositivos debían utilizar la red inalámbrica del Flint 2 y pasar por las reglas que había configurado.
 
-Había desactivado el WiFi del router antiguo desde su configuración.
+Pero observé algo muy sencillo: **el router de la operadora tenía un botón físico que permitía volver a activar el WiFi**.
 
-Eso significaba que los dispositivos debían utilizar la red inalámbrica del nuevo router y, por tanto, pasar por las reglas que había configurado.
+Mi hijo descubrió que podía pulsarlo y recuperar la red inalámbrica anterior. Al conectarse a ella, el tráfico volvía a salir directamente por el router de la operadora y las restricciones configuradas en el GL.iNet dejaban de intervenir.
 
-Hasta que observé algo muy sencillo.
+No había hecho nada especialmente técnico. No había modificado configuraciones ni vulnerado ninguna contraseña. Simplemente había encontrado otro camino.
 
-**El router de la operadora tenía un botón físico que permitía volver a activar el WiFi.**
+Y había otro todavía más sencillo: **las tomas de red de la casa**.
 
-Mi hijo descubrió que podía pulsarlo y recuperar la red inalámbrica anterior.
+## 3. Las tomas Ethernet también evitaban el punto de control
 
-En ese momento podía conectarse directamente al router antiguo y evitar completamente las restricciones del nuevo.
+En mi casa tengo tomas Ethernet en distintas habitaciones. Son muy cómodas, pero en aquella primera configuración seguían conectadas al router de la operadora.
 
-No había hecho nada especialmente técnico. No había modificado configuraciones ni vulnerado ninguna contraseña.
+Eso significaba que bastaba con conectar un ordenador por cable a una de esas tomas para obtener acceso a Internet sin pasar por el Flint 2.
 
-Simplemente había encontrado otro camino.
+![Primer montaje con el GL.iNet conectado al router de la operadora y caminos alternativos por WiFi y Ethernet](/images/router2.png)
 
-Esta fue una de las lecciones más útiles de todo el proyecto:
+*Mi primera configuración con el GL.iNet detrás del router de la operadora. Aunque el Flint 2 aplicaba las restricciones a los dispositivos conectados a él, el router antiguo seguía ofreciendo caminos alternativos: su WiFi podía reactivarse físicamente y las tomas Ethernet de la vivienda seguían conectadas directamente a él.*
+
+Esta fue una de las lecciones más útiles del proyecto:
 
 > **No basta con proteger el camino que esperamos que utilicen. También debemos comprobar qué otros caminos siguen disponibles.**
-
-## 3. Las tomas de red eran otro camino
-
-En mi casa tengo tomas Ethernet en distintas habitaciones.
-
-Eso es muy cómodo, pero en mi primera configuración introducía otro problema.
-
-Si esas tomas estaban conectadas al router de la operadora, bastaba con conectar el ordenador mediante un cable para obtener acceso a Internet sin pasar por el Flint 2.
-
-El recorrido podía ser simplemente:
-
-```text
-Ordenador
-   │
-   ▼
-Toma Ethernet de la habitación
-   │
-   ▼
-Router de la operadora
-   │
-   ▼
-Internet
-```
-
-De nuevo, las reglas que había configurado en el Flint 2 no intervenían en absoluto.
 
 En realidad tenía varias carreteras hacia Internet y estaba colocando los controles solamente en una de ellas.
 
 ## 4. Cambiar el planteamiento: un único punto de salida
 
-Llegados a este punto decidí que la solución más limpia era retirar el router antiguo del recorrido.
+Llegados a este punto decidí cambiar la arquitectura.
 
 Mi objetivo pasó a ser muy concreto:
 
-> **WiFi o cable, los dispositivos de casa debían pasar por el router donde yo aplicaba las reglas.**
+> **WiFi o cable, las conexiones de casa debían pasar por el router donde yo aplicaba las reglas.**
 
-Pero para poder retirar el router de la operadora primero tenía que resolver la conexión de fibra.
+Para conseguirlo necesitaba retirar el router de la operadora del recorrido. Pero primero tenía que resolver un problema: la fibra llegaba directamente a ese equipo.
 
 Ahí entra la ONT.
 
@@ -114,19 +78,17 @@ Una **ONT** es, simplificando mucho, el dispositivo que termina la conexión de 
 
 Conseguí una ONT independiente y separé las dos funciones que antes realizaba el equipo de la operadora.
 
-La arquitectura final quedó así:
+La nueva arquitectura quedó así:
 
-![Esquema de la arquitectura de red: fibra, ONT, Flint 2 como punto central y dispositivos conectados por WiFi y Ethernet](/images/esquema_router.png)
+![Situación final con ONT independiente y GL.iNet Flint 2 como router principal](/images/router3.png)
 
-*Esquema de mi instalación final. La fibra termina en una ONT independiente y el Flint 2 queda como punto central de la red. Tanto el WiFi como las tomas Ethernet de la vivienda pasan por el router donde aplico las reglas.*
+*La instalación final: la fibra termina en una ONT independiente y el GL.iNet Flint 2 se convierte en el router principal. Tanto el WiFi como las tomas Ethernet de la vivienda quedan detrás del mismo punto de control.*
 
 Este cambio era mucho más importante que simplemente sustituir un router por otro.
 
 Ahora **el Flint 2 se convertía realmente en el punto central de la red**.
 
-Ya no existía el WiFi del router anterior que pudiera volver a activarse.
-
-Y las tomas Ethernet de la vivienda quedaban también detrás del Flint 2.
+Ya no existía el WiFi del router anterior que pudiera volver a activarse y las tomas Ethernet de la vivienda también quedaban detrás del Flint 2.
 
 Había eliminado los dos caminos alternativos que había encontrado.
 
@@ -136,9 +98,9 @@ Conectar físicamente una ONT a la fibra no significa necesariamente que vaya a 
 
 En mi caso necesité configurar en ella el parámetro de autenticación de la ONT que utilizaba mi conexión de MásMóvil.
 
-Ese dato lo obtuve de la configuración del router original.
+Ese dato lo obtuve de la configuración del router original y lo introduje en la ONT independiente para que pudiera registrarse correctamente en la red.
 
-No publico aquí esa contraseña ni recomiendo copiar valores de otras conexiones: **son datos propios de cada línea y pueden variar según la operadora y la instalación**.
+No publico esa contraseña porque es un dato propio de mi línea. Además, este procedimiento puede variar según la operadora y el equipo utilizado.
 
 Una vez configurada correctamente la ONT, la fibra quedaba terminada en ese pequeño equipo y podía entregar la conexión mediante Ethernet al Flint 2.
 
@@ -152,9 +114,9 @@ El nuevo router no recibía una dirección IP de la operadora.
 
 En mi instalación, la solución fue hacer que el Flint 2 presentara en su puerto WAN **la misma dirección MAC que utilizaba el router anterior**.
 
-La dirección MAC es un identificador de una interfaz de red. Sin entrar más de lo necesario en el concepto, podemos imaginarla como una especie de matrícula del puerto de red.
+La dirección MAC es un identificador de una interfaz de red. Sin entrar más de lo necesario, podemos imaginarla como una especie de matrícula del puerto de red.
 
-El Flint 2 permite utilizar una dirección diferente de la que trae de fábrica. Esta función se denomina **MAC Clone**.
+El Flint 2 permite utilizar una dirección diferente de la que trae de fábrica mediante la función **MAC Clone**.
 
 En mi caso el recorrido en la interfaz fue:
 
@@ -164,17 +126,15 @@ Introduje la dirección MAC del router antiguo y apliqué el cambio.
 
 Después de hacerlo, **la operadora comenzó a asignar una dirección IP al Flint 2 y la conexión a Internet empezó a funcionar con normalidad**.
 
-> **Importante:** si comparto capturas de esta configuración, oculto datos como la dirección MAC, direcciones de red o códigos QR. Si necesitas realizar una configuración similar, debes utilizar exclusivamente los datos de tu propio equipo y conexión.
+> **Importante:** no comparto datos como la contraseña de la ONT o la dirección MAC de mis equipos. Si necesitas realizar una configuración similar, debes obtener y utilizar exclusivamente los datos de tu propia conexión.
 
-## 8. Cómo comprobé que la arquitectura estaba funcionando
+## 8. Comprobar la arquitectura, no solo que Internet funciona
 
 Una vez realizados los cambios, no me limité a comprobar que podía abrir una página web.
 
 Quería verificar que la arquitectura hacía realmente lo que pretendía.
 
-Ya no debía existir un router anterior proporcionando una segunda WiFi o una conexión Ethernet alternativa.
-
-Tanto los dispositivos inalámbricos como las tomas de red de la vivienda debían quedar detrás del Flint 2.
+Ya no debía existir un router anterior proporcionando una segunda red WiFi o una conexión Ethernet alternativa. Tanto los dispositivos inalámbricos como las tomas de red de la vivienda debían quedar detrás del Flint 2.
 
 Ese era realmente el objetivo de toda esta modificación.
 
@@ -182,15 +142,13 @@ Ese era realmente el objetivo de toda esta modificación.
 
 El resultado no fue simplemente tener un router diferente.
 
-Conseguí algo que para el proyecto era mucho más importante:
-
-**un único punto desde el que podía gestionar buena parte de la salida a Internet de la casa.**
+Conseguí algo que para el proyecto era mucho más importante: **un único punto desde el que podía gestionar buena parte de la salida a Internet de la casa**.
 
 Eso me permitía posteriormente identificar dispositivos, establecer horarios, aplicar filtrado y añadir nuevas reglas sin que bastara con conectarse a otra WiFi o utilizar otra toma Ethernet para evitarlas.
 
 Dicho de otra manera:
 
-> **Antes tenía varias carreteras hacia Internet y controlaba una. Después intenté que las carreteras que necesitábamos pasaran por el mismo punto de control.**
+> **Antes tenía varias carreteras hacia Internet y controlaba una. Después hice que las carreteras que necesitábamos pasaran por el mismo punto de control.**
 
 ## 10. ¿Necesitas hacer lo mismo en tu casa?
 
@@ -220,9 +178,7 @@ Pero eso no significaba que el problema estuviera terminado.
 
 Más adelante descubrí que una VPN instalada en el navegador podía crear otro camino lógico a través de esa misma conexión y evitar parte del filtrado.
 
-Ya no se trataba de pulsar un botón o cambiar un cable.
-
-El dispositivo seguía pasando físicamente por mi router, pero parte del tráfico podía viajar de una forma que hacía inútiles algunas de las restricciones que había configurado.
+Ya no se trataba de pulsar un botón o cambiar un cable. El dispositivo seguía pasando físicamente por mi router, pero parte del tráfico podía viajar de una forma que hacía inútiles algunas de las restricciones que había configurado.
 
 Ese fue el siguiente problema que tuve que resolver.
 
