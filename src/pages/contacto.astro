@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contacto" description="Contacta con Conecta y Protege para dudas, ayuda, charlas, talleres o colaboraciones.">
+  <section class="container page-head contact-head">
+    <div class="eyebrow">¿Hablamos?</div>
+    <h1>Cuéntame en qué puedo ayudarte</h1>
+    <p class="lead">Si tienes una duda concreta, necesitas ayuda con una configuración o quieres organizar una charla, taller o colaboración sobre seguridad digital y menores, escríbeme.</p>
+  </section>
+
+  <section class="container section contact-section">
+    <div class="contact-grid">
+      <div>
+        <h2>También podemos hacer algo juntos</h2>
+        <p>Conecta y Protege nació para compartir lo que voy aprendiendo y probando en casa, pero también puede ser un punto de encuentro para familias, colegios, AMPAs, asociaciones y otras entidades interesadas en un uso más seguro y consciente de la tecnología.</p>
+        <div class="contact-options">
+          <div class="card"><h3>Dudas y ayuda</h3><p>Controles parentales, configuración, redes domésticas o alguna cuestión relacionada con las guías.</p></div>
+          <div class="card"><h3>Charlas y talleres</h3><p>Sesiones para familias, colegios, AMPAs y organizaciones sobre seguridad digital, riesgos y acompañamiento.</p></div>
+          <div class="card"><h3>Colaboraciones</h3><p>Propuestas, experiencias, ideas para nuevos contenidos o iniciativas que encajen con el proyecto.</p></div>
+        </div>
+      </div>
+      <aside class="contact-box">
+        <div class="eyebrow">Contacto</div>
+        <h2>Escríbeme</h2>
+        <p>Cuéntame brevemente qué necesitas y te responderé en cuanto pueda.</p>
+        <a class="button primary contact-button" href="mailto:hola@conectayprotege.com?subject=Contacto%20desde%20Conecta%20y%20Protege">hola@conectayprotege.com</a>
+        <p class="contact-small">Conecta y Protege es un proyecto independiente. El contacto no implica un servicio de soporte permanente y el contenido de la web tiene carácter informativo.</p>
+      </aside>
+    </div>
+  </section>
+
+  <style>
+    .contact-head{max-width:900px}.contact-section{padding-top:16px}.contact-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.75fr);gap:48px;align-items:start}.contact-options{display:grid;gap:14px;margin-top:28px}.contact-options .card{padding:22px 24px}.contact-options h3{margin:0 0 6px}.contact-options p{margin:0}.contact-box{padding:30px;border:1px solid rgba(15,23,42,.1);border-radius:22px;background:var(--surface,#fff);box-shadow:0 12px 40px rgba(15,23,42,.06);position:sticky;top:28px}.contact-box h2{margin:.35rem 0 .6rem}.contact-button{display:block;text-align:center;margin:24px 0 20px}.contact-small{font-size:.88rem;opacity:.7;margin-bottom:0}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:30px}.contact-box{position:static}}
+  </style>
+</BaseLayout>
