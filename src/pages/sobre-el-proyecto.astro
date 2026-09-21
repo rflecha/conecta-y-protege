@@ -3,20 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Sobre el proyecto" description="Qué es Conecta y Protege, quién está detrás y por qué nace este proyecto de seguridad y educación digital para familias.">
-  <section class="container page-head about-intro">
-    <div class="eyebrow">Sobre Conecta y Protege</div>
-    <h1>Tecnología sí. Pero con criterio, acompañamiento y protección.</h1>
-    <p class="lead">Conecta y Protege nace para ayudar a familias que quieren entender mejor el entorno digital de sus hijos y aplicar medidas prácticas sin convertir la tecnología en el enemigo.</p>
-  </section>
-
-  <section class="container section">
-    <div class="grid-3">
-      <div class="card"><div class="card-number">1</div><h3>Experiencia real</h3><p>Partimos de problemas y pruebas que aparecen en una casa normal: ordenadores, televisiones, juegos, móviles, redes y controles que no siempre funcionan como esperamos.</p></div>
-      <div class="card"><div class="card-number">2</div><h3>Explicaciones claras</h3><p>La idea es traducir conceptos técnicos a decisiones que cualquier familia pueda entender, configurar y comprobar.</p></div>
-      <div class="card"><div class="card-number">3</div><h3>Sin recetas perfectas</h3><p>No existe un control parental infalible. Por eso hablaremos también de límites, fallos, privacidad, confianza y autonomía progresiva.</p></div>
-    </div>
-  </section>
-
   <section class="section alt about-story">
     <div class="container about-grid">
       <div class="about-copy">
@@ -42,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <aside class="about-person">
         <figure class="portrait-card">
-          <img src="/images/roberto-flecha.webp" alt="Roberto Flecha, impulsor de Conecta y Protege" loading="lazy" />
+          <img src="/images/roberto-flecha.webp?v=2" alt="Roberto Flecha, impulsor de Conecta y Protege" loading="eager" decoding="async" />
           <figcaption><strong>Roberto Flecha</strong><span>Impulsor de Conecta y Protege</span></figcaption>
         </figure>
         <img class="about-motto" src="/images/lema-tecnologia-importa.webp" alt="Tecnología al servicio de lo que realmente importa" loading="lazy" />
@@ -62,6 +48,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <style>
-    .about-intro{max-width:920px}.about-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.75fr);gap:64px;align-items:start}.about-copy h2{font-size:clamp(2rem,3.5vw,3rem);line-height:1.08;margin:.45rem 0 1.4rem}.about-copy p{font-size:1.05rem;line-height:1.7}.experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 36px}.experience-grid>div{font-size:.86rem;line-height:1.25}.experience-icon-img{display:block;width:64px;height:58px;object-fit:cover;border-radius:14px;margin-bottom:10px}.about-principle{margin-top:30px;padding:22px 24px;border-radius:18px;background:rgba(37,99,235,.07);font-size:1.08rem;line-height:1.5}.about-person{position:sticky;top:28px}.portrait-card{margin:0;border-radius:24px;overflow:hidden;background:var(--surface,#fff);box-shadow:0 18px 55px rgba(15,23,42,.12)}.portrait-card img{display:block;width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:center top}.portrait-card figcaption{padding:18px 22px;display:flex;flex-direction:column}.portrait-card figcaption strong{font-size:1.05rem}.portrait-card figcaption span{opacity:.72;margin-top:2px}.about-motto{display:block;width:100%;max-width:430px;height:auto;margin:24px auto 18px}.talk-card{padding:24px;border-radius:20px;background:rgba(37,99,235,.06)}.talk-card strong{font-size:1.12rem}.talk-card p{margin:.4rem 0 18px;line-height:1.55}.talk-card .button{display:inline-block}.about-story{overflow:visible}@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}.about-person{position:static;max-width:560px;margin:0 auto}.experience-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.experience-grid{grid-template-columns:repeat(2,1fr);gap:18px 10px}.about-copy h2{font-size:2rem}}
+    .about-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.75fr);gap:64px;align-items:start}.about-copy h2{font-size:clamp(2rem,3.5vw,3rem);line-height:1.08;margin:.45rem 0 1.4rem}.about-copy p{font-size:1.05rem;line-height:1.7}.experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 36px}.experience-grid>div{font-size:.86rem;line-height:1.25}.experience-icon-img{display:block;width:64px;height:58px;object-fit:cover;border-radius:14px;margin-bottom:10px}.about-principle{margin-top:30px;padding:22px 24px;border-radius:18px;background:rgba(37,99,235,.07);font-size:1.08rem;line-height:1.5}.about-person{position:sticky;top:28px}.portrait-card{margin:0;border-radius:24px;overflow:hidden;background:var(--surface,#fff);box-shadow:0 18px 55px rgba(15,23,42,.12)}.portrait-card img{display:block;width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:center top}.portrait-card figcaption{padding:18px 22px;display:flex;flex-direction:column}.portrait-card figcaption strong{font-size:1.05rem}.portrait-card figcaption span{opacity:.72;margin-top:2px}.about-motto{display:block;width:100%;max-width:430px;height:auto;margin:24px auto 18px}.talk-card{padding:24px;border-radius:20px;background:rgba(37,99,235,.06)}.talk-card strong{font-size:1.12rem}.talk-card p{margin:.4rem 0 18px;line-height:1.55}.talk-card .button{display:inline-block}.about-story{overflow:visible}@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}.about-person{position:static;max-width:560px;margin:0 auto}.experience-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.experience-grid{grid-template-columns:repeat(2,1fr);gap:18px 10px}.about-copy h2{font-size:2rem}}
   </style>
 </BaseLayout>
