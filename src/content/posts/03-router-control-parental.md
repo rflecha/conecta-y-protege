@@ -26,6 +26,10 @@ El router.
 
 Sí, esa caja con luces que normalmente solo recordamos que existe cuando el wifi deja de funcionar.
 
+![Cómic sobre cómo el router puede servir como punto común para aplicar controles a los dispositivos conectados de casa](/images/articulo3-router-control-parental.webp)
+
+*Ordenador, televisión, consola, tablet o móvil: muchos dispositivos distintos, pero una misma conexión desde la que podemos añadir una capa más de protección.*
+
 ## La puerta de salida de casa
 
 Hasta entonces yo había visto el router principalmente como el aparato que daba wifi en casa.
