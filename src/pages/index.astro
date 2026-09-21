@@ -36,6 +36,7 @@ const technicalGuides = posts.filter((post) => post.data.type === 'technical').s
       (() => {
         const modal = document.getElementById('subscribe-modal');
         const open = document.getElementById('open-subscribe');
+        const headerOpen = document.querySelector('[data-open-subscribe]');
         const close = modal?.querySelector('.subscribe-close');
         let kitLoaded = false;
 
@@ -51,10 +52,13 @@ const technicalGuides = posts.filter((post) => post.data.type === 'technical').s
           kitLoaded = true;
         };
 
-        open?.addEventListener('click', () => {
+        const showSubscribe = (event) => {
+          event?.preventDefault();
           modal?.showModal();
           loadKitForm();
-        });
+        };
+        open?.addEventListener('click', showSubscribe);
+        headerOpen?.addEventListener('click', showSubscribe);
         close?.addEventListener('click', () => modal?.close());
         modal?.addEventListener('click', (event) => {
           if (event.target === modal) modal.close();
