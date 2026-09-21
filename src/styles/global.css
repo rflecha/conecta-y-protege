@@ -69,3 +69,39 @@ a { color:inherit; text-decoration:none; } a:hover { color:var(--brand); } img {
  .home-hero-image{min-height:350px}
  .home-hero-note{right:20px;bottom:28px;font-size:1rem}
 }
+
+/* Homepage approved layout */
+.home-hero-new{background:#edf6ff}
+.home-hero-grid{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);min-height:540px}
+.home-hero-copy{padding:62px 44px 62px 0}
+.home-hero-image{min-height:540px;margin-right:calc((100vw - min(calc(100vw - 56px),var(--max)))/-2)}
+.home-hero-image img{object-position:center 44%}
+.home-hero-image:before{background:linear-gradient(90deg,#edf6ff 0%,rgba(237,246,255,.86) 7%,rgba(237,246,255,.24) 27%,transparent 48%)}
+.home-hero-new + .principles-strip .principles-grid{padding:20px 0}
+.featured-guides{padding-top:42px}
+.featured-guides .section-heading-row{margin-bottom:22px}
+.home-story-card{padding:0;overflow:hidden;min-height:390px}
+.home-card-media{height:150px;position:relative;overflow:hidden;background:#eaf4ff}
+.home-card-media img{width:100%;height:100%;object-fit:cover}
+.home-card-number{position:absolute;left:14px;top:14px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#eaf4ff;color:var(--brand);font-weight:900;border:1px solid rgba(255,255,255,.8)}
+.home-card-body{padding:0 18px 16px;display:flex;flex-direction:column;flex:1}
+.home-card-body h3{margin:16px 0 9px}
+.home-card-body p{flex:1}
+.home-tech-card{grid-template-columns:130px 150px minmax(0,1fr) auto;padding:12px 18px;gap:20px}
+.home-tech-image{width:150px;height:88px;object-fit:cover;border-radius:10px}
+.notice{background:#fff8ea;border-color:#f1d59c}
+@media(max-width:900px){
+ .home-hero-image{margin-inline:-20px;min-height:440px}
+ .home-story-card{min-height:360px}
+ .home-tech-card{grid-template-columns:110px 130px 1fr}
+ .home-tech-image{width:130px;height:82px}
+ .home-tech-card .article-arrow{grid-column:3}
+}
+@media(max-width:760px){
+ .home-hero-grid{grid-template-columns:1fr}
+ .home-hero-image{margin-inline:-14px;min-height:390px}
+ .home-hero-image:before{background:linear-gradient(180deg,#edf6ff 0%,rgba(237,246,255,.2) 18%,transparent 36%)}
+ .home-card-media{height:190px}
+ .home-tech-card{grid-template-columns:1fr;gap:10px}
+ .home-tech-image{width:100%;height:180px}
+}
