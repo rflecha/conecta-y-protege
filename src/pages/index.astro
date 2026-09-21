@@ -18,7 +18,46 @@ const technicalGuides = posts.filter((post) => post.data.type === 'technical').s
     <div class="article-list">{technicalGuides.map((post) => (<a class="article-card" href={`/guias/${post.id}/`}><div class="article-meta">GUÍA TÉCNICA<br />Nivel {post.data.level ?? 'intermedio'}</div><div><h3>{post.data.title}</h3><p>{post.data.description}</p></div><div class="article-arrow">Ver configuración →</div></a>))}</div>
 
     <div class="notice" style="margin-top:48px;"><strong>Los controles no eliminan el riesgo. Nos ayudan a reducirlo.</strong><p style="margin-bottom:0;">La protección más eficaz combina herramientas técnicas con supervisión, educación y diálogo.</p></div>
-    <div class="subscribe-band kit-subscribe" id="suscribete"><script async data-uid="2631c9d7fb" src="https://conecta-y-protege.kit.com/2631c9d7fb/index.js"></script></div>
+    <div class="subscribe-band" id="suscribete"><div class="subscribe-icon">✉</div><div><h3>Nuevas guías para proteger mejor, no para vigilar más</h3><p>Información práctica sobre riesgos, controles y acompañamiento familiar.</p></div><button class="button primary" id="open-subscribe" type="button">Suscribirme</button></div>
+
+    <dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-title">
+      <div class="subscribe-modal-inner">
+        <button class="subscribe-close" type="button" aria-label="Cerrar">×</button>
+        <div class="subscribe-modal-copy">
+          <div class="eyebrow">Conecta y Protege</div>
+          <h2 id="subscribe-title">Sigue aprendiendo a protegerles</h2>
+          <p>Nuevos artículos y guías prácticas sobre seguridad digital, controles parentales y acompañamiento familiar.</p>
+        </div>
+        <div class="subscribe-kit"><script async data-uid="2631c9d7fb" src="https://conecta-y-protege.kit.com/2631c9d7fb/index.js"></script></div>
+      </div>
+    </dialog>
+
+    <script is:inline>
+      (() => {
+        const modal = document.getElementById('subscribe-modal');
+        const open = document.getElementById('open-subscribe');
+        const close = modal?.querySelector('.subscribe-close');
+        open?.addEventListener('click', () => modal?.showModal());
+        close?.addEventListener('click', () => modal?.close());
+        modal?.addEventListener('click', (event) => {
+          if (event.target === modal) modal.close();
+        });
+      })();
+    </script>
+
+    <style is:inline>
+      .subscribe-modal{border:0;padding:0;border-radius:22px;max-width:760px;width:calc(100% - 32px);box-shadow:0 24px 80px rgba(0,0,0,.28);background:var(--surface,#fff)}
+      .subscribe-modal::backdrop{background:rgba(15,23,42,.62);backdrop-filter:blur(3px)}
+      .subscribe-modal-inner{position:relative;padding:34px}
+      .subscribe-close{position:absolute;right:16px;top:12px;border:0;background:transparent;font-size:32px;line-height:1;cursor:pointer;color:inherit;opacity:.65}
+      .subscribe-close:hover{opacity:1}
+      .subscribe-modal-copy{max-width:600px;margin:0 auto 22px;text-align:center}
+      .subscribe-modal-copy h2{margin:.35rem 0 .6rem}
+      .subscribe-modal-copy p{margin:0}
+      .subscribe-kit{max-width:680px;margin:0 auto}
+      #open-subscribe{font:inherit;cursor:pointer}
+      @media(max-width:640px){.subscribe-modal-inner{padding:28px 18px 20px}.subscribe-modal-copy{text-align:left;padding-right:24px}}
+    </style>
     <p class="closing-note">La tecnología puede ayudar a proteger.<br /><strong>La supervisión y el acompañamiento siguen siendo esenciales.</strong></p>
   </div></section>
 </BaseLayout>
