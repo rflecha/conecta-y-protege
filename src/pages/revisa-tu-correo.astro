@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Revisa tu correo" description="Solo falta confirmar tu suscripción a Conecta y Protege." canonical="/revisa-tu-correo/">
+  <section class="confirmation-section">
+    <div class="container">
+      <div class="confirmation-card">
+        <div class="mail-icon" aria-hidden="true">✉</div>
+        <div class="eyebrow">Conecta y Protege</div>
+        <h1>¡Casi está!</h1>
+        <p class="lead">Te he enviado un correo para confirmar tu suscripción.</p>
+        <p>Abre el mensaje de <strong>Conecta y Protege</strong> y pulsa el botón de confirmación. Así nos aseguramos de que nadie ha utilizado tu dirección sin permiso.</p>
+
+        <div class="confirmation-note">
+          <strong>¿No lo encuentras?</strong>
+          <span>Espera un par de minutos y revisa también las carpetas de spam, correo no deseado o promociones.</span>
+        </div>
+
+        <div class="actions confirmation-actions">
+          <a class="button primary" href="/">Volver a Conecta y Protege →</a>
+          <a class="button secondary" href="/articulos">Seguir leyendo</a>
+        </div>
+
+        <p class="confirmation-small">Todavía no estás suscrito. La suscripción se completará cuando confirmes el correo.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .confirmation-section{padding:72px 0 96px;min-height:68vh;display:flex;align-items:center}
+    .confirmation-card{max-width:760px;margin:0 auto;text-align:center;padding:52px 56px;border:1px solid rgba(15,23,42,.1);border-radius:28px;background:var(--surface,#fff);box-shadow:0 18px 60px rgba(15,23,42,.08)}
+    .mail-icon{width:68px;height:68px;margin:0 auto 24px;border-radius:50%;display:grid;place-items:center;background:#eef4ff;color:#315b8a;font-size:31px;font-weight:800}
+    .confirmation-card h1{margin:.4rem 0 1rem}
+    .confirmation-card .lead{max-width:620px;margin:0 auto 18px}
+    .confirmation-card>p:not(.lead):not(.confirmation-small){max-width:610px;margin:0 auto 26px}
+    .confirmation-note{margin:30px auto;padding:20px 24px;max-width:600px;border-radius:16px;background:rgba(37,99,235,.06);text-align:left}
+    .confirmation-note strong,.confirmation-note span{display:block}
+    .confirmation-note span{margin-top:5px}
+    .confirmation-actions{justify-content:center;margin-top:26px}
+    .confirmation-small{font-size:.88rem;opacity:.68;margin:28px 0 0}
+    @media(max-width:640px){.confirmation-section{padding:38px 0 64px}.confirmation-card{padding:36px 20px;border-radius:20px}.confirmation-actions{flex-direction:column}.confirmation-actions .button{width:100%;text-align:center}}
+  </style>
+</BaseLayout>
