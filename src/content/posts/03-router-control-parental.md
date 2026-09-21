@@ -10,250 +10,234 @@ series: historia
 order: 3
 ---
 
-En el artículo anterior terminé haciéndome una pregunta bastante lógica.
+En el artículo anterior terminé haciéndome una pregunta bastante sencilla.
 
-Había ordenado los dispositivos que podía utilizar mi hijo y había intentado reducir el número de lugares desde los que podía acceder libremente a Internet.
+Después de revisar ordenador, televisión, tablet, consola y demás dispositivos, había conseguido reducir un poco el problema. Ya no intentaba controlar todo de la misma manera ni necesitaba que cada aparato tuviera acceso a absolutamente todo.
 
-Pero seguía teniendo un problema.
+Pero seguía teniendo que configurar cosas en muchos sitios distintos.
 
-El ordenador tenía sus controles.
+Un control aquí. Un horario allí. Un PIN en la televisión. Otra configuración en el ordenador...
 
-La televisión, los suyos.
+Y entonces me di cuenta de algo bastante obvio que, curiosamente, no había tenido demasiado en cuenta hasta ese momento.
 
-Una consola podía tener otros.
+**Casi todos esos dispositivos tenían que pasar por el mismo sitio para llegar a Internet.**
 
-Y cada nueva aplicación podía añadir sus propias opciones.
+El router.
 
-Entonces me hice una pregunta:
+Sí, esa caja con luces que normalmente solo recordamos que existe cuando el wifi deja de funcionar.
 
-> **¿Hay algún punto por el que todos estos dispositivos tengan que pasar para llegar a Internet?**
+## La puerta de salida de casa
 
-En casa, en la mayoría de los casos, sí.
+Hasta entonces yo había visto el router principalmente como el aparato que daba wifi en casa.
 
-**El router.**
+Y técnicamente hace bastante más, pero para lo que nos interesa podemos quedarnos con una idea muy sencilla.
 
-## La caja del wifi es bastante más que eso
+El ordenador quiere conectarse a Internet.
 
-Para muchas familias el router es simplemente esa caja con luces que instala la compañía de Internet.
+Pasa por el router.
 
-Si tenemos wifi y Netflix funciona, probablemente no volvamos a pensar demasiado en él.
+La televisión quiere conectarse.
 
-Pero podemos imaginarlo de una forma muy sencilla.
+Pasa por el router.
 
-Nuestro ordenador se conecta al wifi.
+La consola, la tablet, el móvil cuando utiliza el wifi...
 
-La televisión se conecta al wifi.
+Todos acaban pasando por allí.
 
-La tablet se conecta al wifi.
+Así que empecé a verlo de otra manera:
 
-La consola se conecta al wifi.
+> **Si cada dispositivo es una habitación diferente, el router es una de las puertas principales por las que salimos a Internet.**
 
-Y todos utilizan el router para comunicarse con Internet.
+Y pensé que, si todos tenían que pasar por esa puerta, quizá tenía sentido poner también allí parte de la protección.
 
-Por eso empecé a verlo como **la puerta de salida de casa hacia Internet**.
+No sustituir los controles que ya tenía.
 
-Y pensé que, si buena parte de los dispositivos tenían que pasar por esa misma puerta, quizá tenía sentido poner también allí parte de la protección.
+Añadir otra capa.
 
-## Proteger el dispositivo y proteger la conexión
+## En lugar de controlar diez cosas, controlar también un punto común
 
-Este fue otro cambio importante en mi manera de plantear el problema.
+Esta idea me gustó especialmente porque simplificaba bastante el problema.
 
-Hasta entonces había pensado principalmente en proteger **dispositivos**.
+Hasta entonces estaba protegiendo dispositivos.
 
-Configurar el ordenador.
+El ordenador tenía sus restricciones. La televisión tenía las suyas. Una consola podía tener otras.
 
-Configurar la televisión.
+Pero ahora podía proteger también **la conexión que utilizaban esos dispositivos**.
 
-Configurar la tablet.
+Las dos cosas podían funcionar juntas.
 
-Pero también podía proteger **la conexión que utilizan esos dispositivos**.
+Por ejemplo, podía mantener una cuenta limitada en el ordenador y, al mismo tiempo, hacer que desde la conexión de casa ese ordenador tuviera determinadas restricciones.
 
-Y las dos cosas no son excluyentes.
-
-De hecho, creo que se complementan muy bien.
-
-Podemos seguir teniendo una cuenta limitada en el ordenador, un PIN en la televisión o restricciones en una consola y, además, establecer determinadas reglas desde nuestra conexión a Internet.
-
-Volvemos a la misma idea del primer artículo:
+Era volver a una idea que utilizo mucho profesionalmente y que cada vez tenía más sentido también en casa:
 
 **no confiar toda la protección a una única medida.**
 
-## ¿Qué podemos hacer desde el router?
+## Lo primero fue saber qué tenía conectado
 
-Aquí depende mucho del router que tengamos.
+Antes de bloquear nada hice algo mucho más sencillo.
 
-Algunos de los que proporcionan las operadoras ofrecen controles bastante básicos y otros tienen más posibilidades.
+Mirar.
 
-Pero hay algunas funciones que pueden resultarnos interesantes.
+Entré en el router y revisé qué dispositivos estaban conectados a la red de casa.
 
-Por ejemplo, saber **qué dispositivos están conectados a nuestra red**.
+Y aquí puede aparecer alguna sorpresa.
 
-Esto parece una tontería, pero es un buen primer paso.
+Porque empiezas pensando en el ordenador y la televisión y terminas encontrando móviles, tablets, consolas, altavoces, Fire TV, relojes, algún aparato que no recuerdas muy bien qué es...
 
-Podemos descubrir que tenemos bastantes más aparatos conectados de los que imaginábamos.
+*¿Y esto qué demonios era?*
 
-Después podemos identificar cuáles utiliza nuestro hijo.
+En mi caso, lo primero que necesitaba era identificar cuáles utilizaba mi hijo.
 
 Su ordenador.
 
-Su tablet.
+La televisión.
 
 La consola.
 
-La televisión, si corresponde.
+Y cualquier otro dispositivo desde el que pudiera acceder a Internet.
 
-Y dependiendo de las posibilidades de nuestro router podemos establecer reglas para algunos de ellos: horarios, restricciones de acceso o filtros para determinados tipos de contenido.
+Una vez identificados, ya podía empezar a pensar qué quería permitir en cada uno.
 
-La ventaja es evidente:
+## Los horarios fueron una de las cosas más evidentes
 
-**una parte de esas reglas se gestiona desde un único lugar.**
+Pongamos un ejemplo muy sencillo.
 
-## Un ejemplo sencillo: los horarios
+Si hemos decidido que por la noche un ordenador o una tablet no deberían conectarse a Internet, podemos configurar un horario en el propio dispositivo.
 
-Imaginemos que hemos decidido que por la noche el ordenador y la tablet de nuestro hijo no deben tener acceso a Internet.
+Pero si nuestro router lo permite, podemos añadir también esa regla allí.
 
-Podríamos configurar esa restricción individualmente en cada dispositivo.
+A partir de determinada hora, ese dispositivo deja de tener acceso a Internet desde la red de casa.
 
-Y probablemente deberíamos utilizar también sus propios controles cuando sea necesario.
+Da igual que esté usando un navegador, un juego o cualquier otra aplicación.
 
-Pero si nuestro router permite establecer horarios para determinados dispositivos, podemos añadir otra barrera.
-
-A partir de cierta hora, esos dispositivos simplemente dejan de tener acceso a Internet desde nuestra red.
-
-No importa si está utilizando Chrome, un juego u otra aplicación.
-
-La regla está un nivel antes.
+La restricción está antes.
 
 **Está en la conexión.**
 
-Ese concepto fue el que me pareció realmente interesante.
+Y eso me pareció especialmente interesante porque ya no dependía exclusivamente de que todas las configuraciones del dispositivo siguieran funcionando como yo esperaba.
 
-## También podemos filtrar parte del contenido
+Tenía otra barrera.
 
-Otra posibilidad que ofrecen algunos routers o servicios asociados a ellos es filtrar determinados tipos de páginas.
+## También podía filtrar parte del contenido
 
-No necesitamos crear nosotros una lista con miles de direcciones.
+Los horarios eran solo una posibilidad.
 
-Existen sistemas que clasifican páginas de Internet y permiten restringir categorías de contenido.
+Algunos routers permiten además bloquear determinados servicios, dispositivos o tipos de contenido.
 
-Por ejemplo, podemos intentar limitar el acceso a contenidos para adultos o páginas conocidas por distribuir software malicioso.
+No hace falta que nosotros conozcamos y escribamos una por una todas las páginas que queremos evitar. Existen sistemas que clasifican sitios de Internet y permiten bloquear determinadas categorías.
 
-Esto tampoco es infalible.
+Contenido para adultos, páginas maliciosas y otros tipos de sitios que quizá no queramos accesibles desde determinados dispositivos.
 
-Una página nueva puede no estar correctamente clasificada. Un servicio puede cambiar. Y existen formas de intentar evitar algunos de estos filtros.
+¿Significa eso que desaparece todo el contenido inadecuado de Internet?
 
-Pero volvemos al principio que quiero mantener durante toda esta serie:
+Ojalá.
 
-> **No buscamos eliminar completamente el riesgo. Buscamos reducirlo.**
+Una página puede estar mal clasificada. Puede aparecer una nueva. Un servicio puede cambiar. Y, como fui descubriendo después, existen bastantes maneras de intentar esquivar algunos de estos controles.
 
-Si una medida evita una parte importante de accesos accidentales a determinados contenidos, ya está aportando valor.
+Pero aquí volví a la misma conclusión de los artículos anteriores:
 
-## No todos necesitamos comprar otro router
+> **No necesito que una medida elimine el riesgo. Necesito que ayude a reducirlo.**
 
-Llegados a este punto es fácil pensar:
+Si un filtro evita muchos accesos accidentales o pone más difícil llegar a determinados contenidos, ya está haciendo parte de su trabajo.
 
-**“Entonces necesito comprar un router con control parental.”**
+## ¿Entonces hay que comprar otro router?
 
-No necesariamente.
+Aquí es donde podemos empezar a complicarnos la vida innecesariamente.
 
-Yo empezaría siempre mirando qué tenemos ya en casa.
+Y yo tengo cierta facilidad para hacerlo. 😅
 
-Podemos buscar el modelo del router que nos ha instalado nuestra compañía y comprobar qué opciones ofrece.
+Si el router de nuestra compañía ya permite identificar dispositivos, crear horarios y aplicar algún tipo de control parental, quizá tengamos más que suficiente.
 
-Quizá ya permita establecer horarios.
+Antes de comprar nada, yo empezaría por ahí.
 
-Quizá tenga algún sistema de control parental.
+Buscaría el modelo del router que tenemos en casa y comprobaría qué permite hacer.
 
-Quizá permita crear perfiles o identificar dispositivos.
+Puede que descubramos que ya podemos crear horarios.
 
-Para muchas familias esas funciones pueden ser suficientes.
+O bloquear Internet a determinados dispositivos.
 
-Y si lo son, no hay ninguna necesidad de complicarlo más.
+O crear perfiles.
 
-Mi objetivo con este proyecto no es convertir nuestras casas en pequeñas empresas ni conseguir la red doméstica más sofisticada del barrio.
+O aplicar algún filtro.
 
-Es conseguir algo que **podamos entender, mantener y que reduzca razonablemente los riesgos**.
+Y si esas opciones cubren nuestras necesidades, perfecto.
 
-## En mi caso quería tener más control
+**No necesitamos montar la NASA en el salón.**
 
-Aquí mi situación era algo diferente.
+El mejor sistema no es necesariamente el que tiene más opciones. Es el que entendemos, podemos mantener y realmente utilizamos.
 
-Por mi experiencia profesional tenía curiosidad por ver hasta dónde podía llevar esta idea.
+## Yo decidí complicarme un poco más
 
-Quería poder identificar claramente los dispositivos que utilizaba mi hijo y aplicarles unas reglas diferentes a las del resto de la casa.
+En mi caso ocurrió algo diferente.
 
-Y, sobre todo, quería que buena parte de esa protección estuviera centralizada.
+Probablemente aquí apareció mi lado profesional.
 
-Así que terminé utilizando un router con más posibilidades que el que normalmente proporciona una operadora.
+Quería tener más control sobre la red de casa. Quería identificar claramente los dispositivos, aplicar reglas distintas y centralizar buena parte de las restricciones.
 
-Pero hay algo importante:
+Así que terminé utilizando un router con bastantes más posibilidades que el que tenía inicialmente.
 
-**no sustituí el router por todos los demás controles.**
+Y aquí empezó otra pequeña aventura.
 
-El ordenador seguía teniendo sus restricciones.
+Porque cambiar el router parecía bastante sencillo.
 
-La televisión seguía teniendo las suyas.
+*Quito uno. Pongo otro. Fin.*
 
-Las aplicaciones seguían necesitando configuración.
+Bueno...
 
-Simplemente había añadido **otra capa**.
+No exactamente.
 
-## El router tampoco lo ve todo
+Además, durante el proceso descubrí algo que me pareció especialmente importante: **si dejaba caminos alternativos para conectarse, todo lo que configurase en el nuevo router servía de bastante menos.**
 
-Y aquí aparece una limitación importante.
+Podía tener unas reglas estupendas en un sitio y, sin darme cuenta, mantener otra puerta abierta al lado.
 
-El router puede controlar lo que pasa por él.
+Así que terminé reorganizando también la forma en la que se conectaban los dispositivos de casa.
 
-Pero no necesariamente todo lo que hace un dispositivo.
+Pero esa parte ya empieza a ser bastante más técnica.
 
-Si nuestro hijo utiliza un móvil con conexión de datos, por ejemplo, ese tráfico no está pasando por el wifi de casa.
+Para quien tenga curiosidad por saber exactamente qué hice, cómo sustituí el router de la operadora y cómo terminé dejando todos los dispositivos detrás del nuevo router, lo he contado paso a paso en una guía aparte.
 
-Si se conecta a otra red, tampoco.
+Así quien quiera entrar en harina puede hacerlo y quien no, puede seguir leyendo tranquilamente sin aprender qué demonios es una ONT. 😉
 
-Y hay aplicaciones que pueden utilizar técnicas que hacen más difícil aplicar determinadas restricciones.
+## El router tampoco es una solución mágica
 
-Por eso tampoco debemos caer en la falsa sensación de seguridad de pensar:
+Hay algo que me parece especialmente importante dejar claro.
 
-**“Tengo control parental en el router, así que ya está todo protegido.”**
+El router solo puede controlar lo que pasa por él.
 
-No lo está.
+Si un móvil utiliza su conexión de datos, ya no está pasando por el wifi de casa.
 
-Pero sí hemos conseguido algo importante.
+Si un dispositivo se conecta a otra red, tampoco.
 
-Tenemos una **primera línea común de protección** para muchos de los dispositivos que utilizamos en casa.
+Y existen tecnologías y aplicaciones capaces de crear otros caminos para acceder a Internet.
 
-## ¿Qué buscaría hoy en un router?
+Por eso poner controles en el router y pensar *“ya está, asunto solucionado”* sería volver exactamente al error que estaba intentando evitar.
 
-Si tuviera que empezar de nuevo, antes de comprar nada comprobaría si mi router permite al menos algunas cosas sencillas:
+El router es **una capa más**.
 
-- ver e identificar fácilmente los dispositivos conectados;
-- aplicar reglas diferentes a determinados dispositivos;
-- establecer horarios de acceso;
-- utilizar algún sistema de filtrado de contenidos;
-- y tener una administración suficientemente sencilla como para que realmente vayamos a utilizarla.
+Una bastante interesante porque puede proteger muchos dispositivos desde un único punto, pero una capa al fin y al cabo.
 
-No elegiría un router simplemente porque en la caja aparezca escrito **“control parental”**.
+## Al final empezaba a tener sentido
 
-Intentaría entender qué significa exactamente ese control parental y qué permite hacer.
+Llegados a este punto, la idea que había empezado casi por casualidad comenzaba a tener cierta estructura.
 
-Porque, como iremos viendo, no todos los controles funcionan de la misma manera.
+Primero había reducido los dispositivos y accesos que realmente necesitábamos.
 
-## Ya teníamos varias capas
-
-Llegados a este punto, mi planteamiento empezaba a tener bastante más sentido.
-
-Había intentado reducir el número de dispositivos que necesitaba controlar.
-
-Los dispositivos tenían sus propias restricciones.
+Después había configurado controles en aquellos que sí utilizábamos.
 
 Y ahora tenía también un punto común desde el que aplicar determinadas reglas a la conexión de casa.
 
 **Dispositivo + conexión.**
 
-No era una solución perfecta.
+Dos capas diferentes.
 
-Pero tampoco necesitaba que lo fuera.
+Ninguna perfecta.
 
-Era considerablemente mejor que depender de una única barrera.
+Pero juntas bastante más útiles que confiarlo todo a una sola barrera.
 
-El siguiente paso, para una familia que no quiera entrar en configuraciones de red, es mucho más cotidiano: entender qué permiten realmente los controles parentales de nuestros dispositivos y servicios, desde los horarios hasta las aplicaciones y los contenidos.
+Y, sobre todo, seguían siendo solo herramientas.
+
+Porque podía poner horarios, filtros, PIN y restricciones, pero todavía quedaba una cuestión bastante más importante: **decidir qué límites tenían sentido para mi hijo y cómo aplicarlos sin convertir la tecnología en una batalla permanente.**
+
+Ahí es donde entran los controles parentales de verdad: horarios, aplicaciones, contenidos, tiempo de pantalla... y también las normas que ponemos fuera de cualquier aplicación.
+
+Y esa fue la siguiente parte que tuve que ordenar.
