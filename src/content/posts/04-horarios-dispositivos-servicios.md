@@ -16,6 +16,10 @@ Ya tenía el sitio desde el que poner las reglas. Ahora faltaba decidir algo bas
 
 Porque bloquear Internet es fácil. Lo difícil es conseguir que mi hijo pueda utilizar la tecnología para estudiar, jugar o ver contenidos y, al mismo tiempo, establecer unos límites razonables. No quería tener simplemente un interruptor de *Internet sí / Internet no*. Necesitaba algo un poco más flexible.
 
+![Cómic sobre cómo organizar el control parental a partir de tres preguntas: quién utiliza cada dispositivo, cuándo puede conectarse y para qué](/images/articulo4-horarios-dispositivos-servicios.webp)
+
+*¿Quién, cuándo y para qué? Tres preguntas sencillas para que las reglas acompañen a la familia en lugar de complicarle la vida.*
+
 ## No todos los dispositivos son iguales
 
 Lo primero fue identificar qué dispositivos utilizaba mi hijo y para qué servía cada uno. El ordenador podía utilizarse para estudiar, navegar o jugar; la televisión principalmente para ver contenidos; y la consola, para jugar. Aplicar exactamente las mismas restricciones a todos tenía poco sentido.
