@@ -4,71 +4,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="¿Hablamos?" description="Dudas, ayuda, charlas, talleres y colaboraciones con Conecta y Protege.">
   <section class="contact-hero">
-    <div class="container contact-hero-grid">
-      <div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
         <div class="eyebrow">¿Hablamos?</div>
         <h1>La tecnología plantea preguntas.<br /><span>Podemos buscar respuestas juntos.</span></h1>
-        <p class="lead">Una duda en casa, una configuración que se resiste, una charla para familias o una idea que merece la pena compartir. Cuéntame qué tienes en mente.</p>
-        <a class="button primary hero-button" href="mailto:hola@conectayprotege.com?subject=Contacto%20desde%20Conecta%20y%20Protege">Escríbeme →</a>
+        <p>Si tienes dudas, quieres contar tu experiencia, proponer una colaboración o simplemente compartir una idea, estaré encantado de leerte. Entre todos podemos construir un entorno digital más seguro para nuestros hijos.</p>
       </div>
-      <div class="hero-bubble" aria-hidden="true">
-        <span class="bubble bubble-one">?</span>
-        <span class="bubble bubble-two">💬</span>
-        <span class="bubble bubble-three">✓</span>
-        <div class="hero-message"><strong>hola@</strong><br />conectayprotege.com</div>
+      <div class="hero-art">
+        <img src="/images/contacto-hero.webp" alt="Una conversación cercana sobre tecnología y familia" />
+        <div class="hand-note">Pequeñas conversaciones<br />también cambian<br />grandes cosas :)</div>
       </div>
     </div>
   </section>
 
-  <section class="container contact-main">
-    <div class="section-title">
-      <div class="eyebrow">Cuéntame</div>
-      <h2>¿En qué puedo ayudarte?</h2>
-      <p>No hace falta que encaje exactamente en una categoría. Estas son algunas de las cosas sobre las que podemos hablar.</p>
-    </div>
-
+  <main class="container contact-content">
     <div class="contact-options">
-      <a class="contact-card" href="mailto:hola@conectayprotege.com?subject=Duda%20o%20ayuda%20-%20Conecta%20y%20Protege">
-        <span class="card-icon icon-blue">?</span>
-        <div><h3>Dudas y ayuda</h3><p>Controles parentales, configuración, redes domésticas o alguna cuestión relacionada con las guías.</p><span class="card-link">Cuéntame tu caso →</span></div>
-      </a>
-      <a class="contact-card" href="mailto:hola@conectayprotege.com?subject=Charla%20o%20taller%20-%20Conecta%20y%20Protege">
-        <span class="card-icon icon-green">◌</span>
-        <div><h3>Charlas y talleres</h3><p>Para familias, colegios, AMPAs y organizaciones que quieran hablar de seguridad digital, riesgos y acompañamiento.</p><span class="card-link">Organizamos una →</span></div>
-      </a>
-      <a class="contact-card" href="mailto:hola@conectayprotege.com?subject=Colaboracion%20-%20Conecta%20y%20Protege">
-        <span class="card-icon icon-violet">+</span>
-        <div><h3>Colaboraciones</h3><p>Experiencias, propuestas, ideas para nuevos contenidos o iniciativas que puedan encajar con el proyecto.</p><span class="card-link">Propón una idea →</span></div>
-      </a>
+      <a class="option blue" href="#escribeme"><span class="option-icon">◯</span><div><h2>Dudas y ayuda</h2><p>¿Tienes alguna duda sobre control parental, dispositivos, apps o seguridad digital?</p></div><b>→</b></a>
+      <a class="option green" href="#escribeme"><span class="option-icon">☼</span><div><h2>Charlas y talleres</h2><p>Si formas parte de un colegio, AMPA o entidad y te interesa una charla o taller, hablamos.</p></div><b>→</b></a>
+      <a class="option violet" href="#escribeme"><span class="option-icon">◇</span><div><h2>Colaboraciones</h2><p>¿Quieres proponer un proyecto, compartir una iniciativa o colaborar con el blog?</p></div><b>→</b></a>
     </div>
 
-    <div class="contact-strip">
-      <div>
-        <span class="strip-kicker">Contacto directo</span>
-        <h2>También puedes escribirme sin más.</h2>
-        <p>Conecta y Protege es un proyecto independiente. Leo personalmente los mensajes e intento responder en cuanto puedo.</p>
+    <section class="conversation-grid" id="escribeme">
+      <div class="write-card">
+        <h2>Escríbeme</h2>
+        <p>Cuéntame en qué puedo ayudarte. Intentaré responder lo antes posible.</p>
+        <form action="mailto:hola@conectayprotege.com" method="get" enctype="text/plain">
+          <div class="two-fields">
+            <label><span>Nombre</span><input name="nombre" autocomplete="name" placeholder="Nombre" /></label>
+            <label><span>Tu email</span><input name="email" type="email" autocomplete="email" placeholder="Tu email" required /></label>
+          </div>
+          <label><span>Asunto</span><select name="subject" required><option value="">Selecciona un asunto</option><option>Duda o ayuda</option><option>Charla o taller</option><option>Colaboración</option><option>Otra consulta</option></select></label>
+          <label><span>Tu mensaje</span><textarea name="body" rows="6" placeholder="Tu mensaje" required></textarea></label>
+          <div class="form-footer"><button class="button primary" type="submit">Enviar mensaje →</button><small>🔒 Solo uso tus datos para responder a tu mensaje. No los comparto con terceros.</small></div>
+        </form>
       </div>
-      <a class="email-link" href="mailto:hola@conectayprotege.com?subject=Hola%20Conecta%20y%20Protege">
-        <span class="email-icon">✉</span>
-        <span><small>Escribe a</small><strong>hola@conectayprotege.com</strong></span>
-        <b>→</b>
-      </a>
-    </div>
 
-    <p class="contact-note">El contenido de Conecta y Protege tiene carácter informativo y no sustituye el criterio profesional educativo, psicológico, jurídico o de seguridad cuando sea necesario.</p>
+      <aside class="contact-aside">
+        <div class="quick"><span class="quick-icon mail">✉</span><div><strong>Email directo</strong><a href="mailto:hola@conectayprotege.com">hola@conectayprotege.com</a></div></div>
+        <div class="quick"><span class="quick-icon clock">◷</span><div><strong>Respuesta personal</strong><p>Leo personalmente los mensajes e intento responder en cuanto puedo.</p></div></div>
+        <div class="quick"><span class="quick-icon heart">♡</span><div><strong>¡Gracias!</strong><p>Tu mensaje también ayuda a que este proyecto siga creciendo.</p></div></div>
+        <img class="conversation-note" src="/images/contacto-conversacion.webp" alt="Las mejores ideas siempre empiezan en una conversación" loading="lazy" />
+      </aside>
+    </section>
+  </main>
+
+  <section class="contact-footer-wave">
+    <div class="container wave-inner">
+      <div class="community"><span class="shield">✓</span><div><strong>Gracias por formar parte<br />de esta comunidad</strong><p>Un mundo digital más seguro es posible, y empieza con personas como tú.</p></div></div>
+      <img src="/images/contacto-lema-personas.webp" alt="Tecnología al servicio de las personas" loading="lazy" />
+    </div>
   </section>
 
   <style>
-    .contact-hero{padding:76px 0 70px;background:linear-gradient(135deg,rgba(37,99,235,.07),rgba(255,255,255,.2) 55%,rgba(34,197,94,.06));overflow:hidden}
-    .contact-hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:70px;align-items:center}
-    .contact-hero h1{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;margin:.45rem 0 1.35rem;max-width:900px}
-    .contact-hero h1 span{color:#1769c2}.contact-hero .lead{max-width:760px;font-size:1.18rem;line-height:1.65}.hero-button{margin-top:12px}
-    .hero-bubble{height:320px;position:relative}.hero-message{position:absolute;inset:72px 20px 35px 45px;border-radius:32px;background:#fff;box-shadow:0 22px 70px rgba(15,23,42,.12);display:grid;place-content:center;text-align:center;font-size:1.2rem;line-height:1.4;transform:rotate(-2deg)}.hero-message strong{font-size:2rem;color:#1769c2}
-    .bubble{position:absolute;display:grid;place-items:center;border-radius:50%;font-weight:800;z-index:2;box-shadow:0 10px 28px rgba(15,23,42,.1)}.bubble-one{width:68px;height:68px;right:10px;top:20px;background:#e9f2ff;color:#1769c2;font-size:2rem}.bubble-two{width:58px;height:58px;left:5px;bottom:25px;background:#eaf9ef;font-size:1.45rem}.bubble-three{width:48px;height:48px;right:28px;bottom:5px;background:#f2ebff;color:#6d3ac6;font-size:1.3rem}
-    .contact-main{padding-top:70px;padding-bottom:72px}.section-title{max-width:760px;margin-bottom:32px}.section-title h2{font-size:clamp(2rem,3.5vw,3rem);margin:.35rem 0 .65rem}.section-title p{font-size:1.05rem}
-    .contact-options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact-card{display:flex;flex-direction:column;gap:20px;padding:28px;border:1px solid rgba(15,23,42,.08);border-radius:22px;background:#fff;color:inherit;text-decoration:none;box-shadow:0 8px 30px rgba(15,23,42,.045);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.contact-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,23,42,.09);border-color:rgba(37,99,235,.22)}.contact-card h3{margin:0 0 8px;font-size:1.25rem}.contact-card p{margin:0;line-height:1.55}.card-icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.55rem;font-weight:800}.icon-blue{background:#eaf3ff;color:#1769c2}.icon-green{background:#eaf9ef;color:#15803d}.icon-violet{background:#f2ebff;color:#6d3ac6}.card-link{display:block;margin-top:20px;color:#1769c2;font-weight:700}
-    .contact-strip{margin-top:52px;padding:34px 38px;border-radius:26px;background:#0d2340;color:#fff;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}.contact-strip h2{margin:.35rem 0 .45rem;color:#fff}.contact-strip p{margin:0;max-width:680px;opacity:.82}.strip-kicker{text-transform:uppercase;letter-spacing:.09em;font-size:.76rem;font-weight:800;opacity:.7}.email-link{display:flex;align-items:center;gap:14px;background:#fff;color:#0d2340;text-decoration:none;padding:16px 18px;border-radius:16px;min-width:315px}.email-icon{font-size:1.4rem}.email-link span:nth-child(2){display:flex;flex-direction:column}.email-link small{opacity:.62}.email-link strong{font-size:.95rem}.email-link b{margin-left:auto;color:#1769c2;font-size:1.25rem}.contact-note{text-align:center;max-width:850px;margin:28px auto 0;font-size:.86rem;opacity:.65}
-    @media(max-width:850px){.contact-hero{padding:52px 0}.contact-hero-grid{grid-template-columns:1fr;gap:28px}.hero-bubble{height:230px;max-width:430px;width:100%;margin:0 auto}.hero-message{inset:35px 25px 25px}.contact-options{grid-template-columns:1fr}.contact-strip{grid-template-columns:1fr;padding:28px}.email-link{min-width:0}.contact-hero h1{font-size:2.65rem}}
-    @media(max-width:480px){.contact-hero h1{font-size:2.3rem}.email-link strong{font-size:.82rem}.contact-strip{padding:24px 20px}}
+    .contact-hero{padding:68px 0 24px}.hero-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(420px,1.05fr);gap:58px;align-items:center}.hero-copy h1{font-size:clamp(2.8rem,5vw,4.8rem);line-height:1.01;letter-spacing:-.045em;margin:.5rem 0 1.25rem}.hero-copy h1 span{color:#1473e6}.hero-copy p{font-size:1.12rem;line-height:1.65;max-width:680px}.hero-art{position:relative}.hero-art>img{display:block;width:100%;border-radius:44% 56% 42% 58% / 36% 34% 66% 64%;object-fit:cover}.hand-note{position:absolute;right:-8px;top:8px;color:#0874e8;font-size:1.2rem;font-weight:700;font-style:italic;line-height:1.12;transform:rotate(-5deg);text-align:center}
+    .contact-content{padding-top:28px;padding-bottom:64px}.contact-options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.option{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:25px 24px;border-radius:20px;color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.option:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,23,42,.08)}.option.blue{background:#edf6ff}.option.green{background:#edfbf3}.option.violet{background:#f5efff}.option-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.72);font-size:1.65rem;font-weight:800}.option h2{font-size:1.16rem;margin:0 0 5px}.option p{font-size:.92rem;line-height:1.45;margin:0}.option b{font-size:1.55rem;color:#1473e6}
+    .conversation-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr);gap:54px;margin-top:38px;align-items:center}.write-card{border:1px solid #dce5ef;border-radius:22px;padding:30px;background:#fff;box-shadow:0 8px 30px rgba(15,23,42,.035)}.write-card h2{font-size:2rem;margin:0}.write-card>p{margin:.25rem 0 18px}.write-card form{display:grid;gap:12px}.two-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.write-card label>span{position:absolute;clip:rect(0 0 0 0)}.write-card input,.write-card select,.write-card textarea{width:100%;box-sizing:border-box;border:1px solid #cfd9e6;border-radius:10px;padding:13px 14px;font:inherit;background:#fff;color:inherit}.write-card textarea{resize:vertical}.form-footer{display:flex;gap:22px;align-items:center;margin-top:3px}.form-footer small{max-width:330px;opacity:.65;line-height:1.35}
+    .contact-aside{position:relative;display:grid;gap:22px;padding:15px 0}.quick{display:flex;gap:16px;align-items:flex-start}.quick-icon{flex:0 0 54px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.45rem;font-weight:700}.quick-icon.mail{background:#e8f3ff;color:#1473e6}.quick-icon.clock{background:#fff4d9;color:#c98200}.quick-icon.heart{background:#ffe9ec;color:#dc3345}.quick strong{display:block;margin:3px 0 2px}.quick p{margin:0;line-height:1.45}.quick a{color:#1473e6;text-decoration:none}.conversation-note{display:block;width:72%;max-width:350px;margin:4px 0 0 auto}
+    .contact-footer-wave{background:linear-gradient(180deg,#eef8ff,#e4f3ff);padding:48px 0 42px;border-radius:50% 50% 0 0 / 18% 18% 0 0}.wave-inner{display:flex;justify-content:space-between;gap:50px;align-items:center}.community{display:flex;gap:18px;align-items:center}.community .shield{width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#1473e6;font-size:1.7rem;font-weight:900}.community strong{font-size:1.15rem}.community p{margin:.3rem 0 0;max-width:360px}.wave-inner>img{width:min(390px,42%);height:auto}
+    @media(max-width:900px){.hero-grid,.conversation-grid{grid-template-columns:1fr}.hero-art{max-width:650px;margin:0 auto}.contact-options{grid-template-columns:1fr}.contact-aside{max-width:620px}.wave-inner{flex-direction:column;align-items:flex-start}.wave-inner>img{width:min(390px,90%)}}
+    @media(max-width:600px){.contact-hero{padding-top:42px}.hero-copy h1{font-size:2.55rem}.hero-grid{gap:28px}.hand-note{display:none}.two-fields{grid-template-columns:1fr}.form-footer{align-items:flex-start;flex-direction:column}.write-card{padding:22px}.option{grid-template-columns:auto 1fr;padding:20px}.option b{display:none}.conversation-note{width:90%;margin-left:0}.contact-footer-wave{border-radius:45% 45% 0 0 / 8% 8% 0 0}}
   </style>
 </BaseLayout>
