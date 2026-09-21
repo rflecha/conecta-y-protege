@@ -131,3 +131,77 @@ a { color:inherit; text-decoration:none; } a:hover { color:var(--brand); } img {
  .home-hero-grid{width:min(calc(100% - 28px),var(--max))}
  .home-card-media{aspect-ratio:16/9}
 }
+
+
+/* Homepage final responsive pass */
+.home-hero-new{position:relative;overflow:hidden;background:#edf6ff}
+.home-hero-grid{width:min(calc(100% - 56px),var(--max));max-width:var(--max);margin-inline:auto;grid-template-columns:minmax(360px,.72fr) minmax(0,1.28fr);min-height:500px}
+.home-hero-copy{padding:54px 38px 54px 0}
+.home-hero-copy h1{font-size:clamp(3rem,4.25vw,4.55rem)}
+.home-hero-image{min-height:500px;margin-right:0;overflow:hidden}
+.home-hero-image img{inset:0;width:100%;height:100%;object-fit:cover;object-position:55% center}
+.home-hero-image:before{background:linear-gradient(90deg,#edf6ff 0%,rgba(237,246,255,.78) 8%,rgba(237,246,255,.16) 27%,transparent 44%)}
+.home-hero-note{right:24px;bottom:38px}
+.featured-guides>.container{width:min(calc(100% - 56px),var(--max));max-width:var(--max)}
+.featured-guides .guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.home-story-card{min-height:0;height:100%}
+.home-card-media{height:auto;aspect-ratio:8/5}
+.home-card-media img{object-fit:cover;object-position:center}
+.home-card-body{padding:0 16px 14px}
+.home-card-body h3{font-size:1rem;line-height:1.2}
+.home-card-body p{font-size:.88rem;line-height:1.48}
+.home-tech-card{grid-template-columns:120px 160px minmax(0,1fr) auto}
+.home-tech-image{width:160px;height:92px;object-fit:cover}
+
+@media(max-width:900px){
+ .home-hero-grid{width:min(calc(100% - 40px),var(--max));grid-template-columns:1fr}
+ .home-hero-copy{padding:40px 0 28px}
+ .home-hero-image{margin:0;min-height:0;aspect-ratio:16/9;border-radius:18px 18px 0 0}
+ .home-hero-image:before{background:linear-gradient(180deg,rgba(237,246,255,.08),transparent 35%)}
+ .home-hero-image img{position:absolute;object-position:center 48%}
+ .home-hero-note{right:22px;bottom:24px}
+ .featured-guides>.container{width:min(calc(100% - 40px),var(--max))}
+ .featured-guides .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-tech-card{grid-template-columns:110px 140px minmax(0,1fr)}
+ .home-tech-image{width:140px;height:84px}
+}
+@media(max-width:760px){
+ .nav{grid-template-columns:1fr auto;padding:10px 0;min-height:64px}
+ .brand-logo{width:170px;max-height:48px}
+ .nav-links{grid-column:1/-1;order:3;gap:18px;padding-bottom:2px}
+ .nav-cta{display:inline-flex;font-size:.82rem;padding:9px 14px}
+ .home-hero-grid{width:100%;display:flex;flex-direction:column}
+ .home-hero-image{order:1;width:100%;aspect-ratio:16/10;border-radius:0}
+ .home-hero-copy{order:2;width:min(calc(100% - 28px),var(--max));margin-inline:auto;padding:28px 0 34px}
+ .home-hero-copy h1{font-size:clamp(2.55rem,12vw,3.55rem);line-height:.98}
+ .home-hero-copy .lead{font-size:1rem}
+ .home-hero-copy .actions{display:grid;grid-template-columns:1fr;gap:10px}
+ .home-hero-note{font-size:.9rem;right:16px;bottom:18px}
+ .principles-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;padding:20px 0}
+ .principle{grid-template-columns:42px 1fr;gap:10px}
+ .principle-icon{width:42px;height:42px;font-size:1.1rem}
+ .principle h3{font-size:.9rem}.principle p{font-size:.76rem}
+ .featured-guides{padding-top:36px}
+ .featured-guides>.container{width:min(calc(100% - 28px),var(--max))}
+ .featured-guides .section-heading-row{gap:10px}
+ .section-heading-row h2{font-size:1.9rem}
+ .featured-guides .guide-grid{grid-template-columns:1fr;gap:14px}
+ .home-story-card{display:grid;grid-template-columns:42% 58%;min-height:150px}
+ .home-card-media{height:100%;aspect-ratio:auto}
+ .home-card-body{padding:0 14px 12px}
+ .home-card-body h3{margin:14px 0 7px;font-size:.98rem}
+ .home-card-body p{display:none}
+ .home-card-number{width:34px;height:34px;left:10px;top:10px}
+ .guide-meta{font-size:.72rem;padding-top:9px}
+ .home-tech-card{grid-template-columns:92px minmax(0,1fr);padding:10px;gap:12px}
+ .home-tech-card .article-meta{display:none}
+ .home-tech-image{width:92px;height:72px}
+ .home-tech-card h3{font-size:.9rem;margin:0}
+ .home-tech-card p{display:none}
+ .home-tech-card .article-arrow{display:block;grid-column:2;font-size:.78rem}
+ .notice{margin-top:30px!important}
+ .subscribe-band{text-align:left;grid-template-columns:48px 1fr;padding:18px}
+ .subscribe-icon{width:48px;height:48px;margin:0}
+ .subscribe-band .button{grid-column:1/-1;width:100%}
+ .closing-note{text-align:center;margin-right:0}
+}
