@@ -105,3 +105,29 @@ a { color:inherit; text-decoration:none; } a:hover { color:var(--brand); } img {
  .home-tech-card{grid-template-columns:1fr;gap:10px}
  .home-tech-image{width:100%;height:180px}
 }
+
+
+/* Homepage layout correction — keep every section aligned to the approved composition */
+.featured-guides > .container{width:min(calc(100% - 56px),var(--max));max-width:var(--max);margin-inline:auto}
+.featured-guides .guide-grid{width:100%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.featured-guides .section-heading-row{width:100%}
+.home-story-card{width:100%;min-width:0}
+.home-card-media{width:100%;aspect-ratio:1.55/1;height:auto}
+.home-card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.home-card-body{min-width:0}
+.home-card-body h3{font-size:1.02rem;line-height:1.18}
+.article-list{width:100%}
+.home-tech-card{width:100%;min-width:0}
+.home-hero-grid{width:min(calc(100% - 56px),var(--max));max-width:var(--max)}
+.home-hero-image img{object-fit:cover;object-position:center center}
+@media(max-width:900px){
+ .featured-guides > .container{width:min(calc(100% - 40px),var(--max))}
+ .featured-guides .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-hero-grid{width:min(calc(100% - 40px),var(--max))}
+}
+@media(max-width:760px){
+ .featured-guides > .container{width:min(calc(100% - 28px),var(--max))}
+ .featured-guides .guide-grid{grid-template-columns:1fr}
+ .home-hero-grid{width:min(calc(100% - 28px),var(--max))}
+ .home-card-media{aspect-ratio:16/9}
+}
