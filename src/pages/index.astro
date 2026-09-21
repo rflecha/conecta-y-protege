@@ -28,7 +28,7 @@ const technicalGuides = posts.filter((post) => post.data.type === 'technical').s
           <h2 id="subscribe-title">Sigue aprendiendo a protegerles</h2>
           <p>Nuevos artículos y guías prácticas sobre seguridad digital, controles parentales y acompañamiento familiar.</p>
         </div>
-        <div class="subscribe-kit"><script async data-uid="2631c9d7fb" src="https://conecta-y-protege.kit.com/2631c9d7fb/index.js"></script></div>
+        <div class="subscribe-kit" id="kit-form-container"></div>
       </div>
     </dialog>
 
@@ -37,7 +37,24 @@ const technicalGuides = posts.filter((post) => post.data.type === 'technical').s
         const modal = document.getElementById('subscribe-modal');
         const open = document.getElementById('open-subscribe');
         const close = modal?.querySelector('.subscribe-close');
-        open?.addEventListener('click', () => modal?.showModal());
+        let kitLoaded = false;
+
+        const loadKitForm = () => {
+          if (kitLoaded) return;
+          const container = document.getElementById('kit-form-container');
+          if (!container) return;
+          const script = document.createElement('script');
+          script.async = true;
+          script.dataset.uid = '2631c9d7fb';
+          script.src = 'https://conecta-y-protege.kit.com/2631c9d7fb/index.js';
+          container.appendChild(script);
+          kitLoaded = true;
+        };
+
+        open?.addEventListener('click', () => {
+          modal?.showModal();
+          loadKitForm();
+        });
         close?.addEventListener('click', () => modal?.close());
         modal?.addEventListener('click', (event) => {
           if (event.target === modal) modal.close();
