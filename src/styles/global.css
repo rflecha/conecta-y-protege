@@ -245,3 +245,16 @@ html,body{background:#fff}
     max-width:none;
   }
 }
+
+
+/* Home content breathing room */
+@media (min-width:901px){
+  .home-hero-copy{padding-left:30px}
+  .home-hero-new + .principles-strip .principles-grid{padding-left:30px;padding-right:30px}
+  .featured-guides > .container{padding-left:30px;padding-right:30px;box-sizing:border-box}
+}
+@media (max-width:900px){
+  .home-hero-copy{padding-left:20px;padding-right:20px}
+  .home-hero-new + .principles-strip .principles-grid{padding-left:20px;padding-right:20px}
+  .featured-guides > .container{padding-left:20px;padding-right:20px;box-sizing:border-box}
+}
