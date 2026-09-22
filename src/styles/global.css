@@ -219,3 +219,29 @@ a { color:inherit; text-decoration:none; } a:hover { color:var(--brand); } img {
     max-width:none;
   }
 }
+
+
+/* White outer canvas on wide screens; section colours stay inside the site frame */
+html,body{background:#fff}
+@media (min-width:901px){
+  .home-hero-new{
+    width:min(calc(100% - 56px),var(--max));
+    margin-inline:auto;
+  }
+  .home-hero-grid{
+    width:100%;
+    max-width:none;
+  }
+  .home-hero-new + .principles-strip{
+    width:min(calc(100% - 56px),var(--max));
+    margin-inline:auto;
+  }
+  .featured-guides{
+    width:min(calc(100% - 56px),var(--max));
+    margin-inline:auto;
+  }
+  .featured-guides > .container{
+    width:100%;
+    max-width:none;
+  }
+}
