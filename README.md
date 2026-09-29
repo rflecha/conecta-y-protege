@@ -1,3 +1,3 @@
 # Conecta y Protege
 
-Seguridad y educación digital para familias.
+Seguridad y educación digital para familias..
